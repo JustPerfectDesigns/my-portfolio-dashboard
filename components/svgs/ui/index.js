@@ -1,0 +1,10 @@
+export { default as AdobeXd } from "./adobeXd.svg";
+export { default as Axure } from "./axure.svg";
+export { default as Balsamiq } from "./balsamiq.svg";
+export { default as Figma } from "./figma.svg";
+export { default as FramerX } from "./framerX.svg";
+export { default as InvisionStudio } from "./invisionStudio.svg";
+export { default as Marvel } from "./marvel.svg";
+export { default as Proto } from "./proto.svg";
+export { default as Sketch } from "./sketch.svg";
+export { default as Wireframe } from "./wireframe.svg";

@@ -1,0 +1,16 @@
+export { default as Astro } from "./astro-js.svg";
+export { default as Bootstrap } from "./bootstrap-5-1.svg";
+export { default as Css } from "./css-3.svg";
+export { default as FramerMotion } from "./framer-motion.svg";
+export { default as Github } from "./github-icon-1.svg";
+export { default as HtmlIcon } from "./html-1.svg";
+export { default as Gsap } from "./gsap-greensock.svg";
+export { default as Javascript } from "./javascript.svg";
+export { default as Mui } from "./material-ui.svg";
+export { default as Next } from "./next-js.svg";
+export { default as Qwik } from "./qwik.svg";
+export { default as React } from "./react-2.svg";
+export { default as Sanity } from "./sanity.svg";
+export { default as Sass } from "./sass-1.svg";
+export { default as Solid } from "./solidjs-icon.svg";
+export { default as TailwindCss } from "./tailwind-css-2.svg";
