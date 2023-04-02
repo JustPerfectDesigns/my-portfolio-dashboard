@@ -91,7 +91,7 @@ export default function Home({ portfolios }) {
 							variants={textVariant(0.3)}
 							className="text-lg lg:text-2xl text-green-color-alt dark:text-green-color uppercase font-semibold text-center mb-8"
 						>
-							Gabriel Samuel A.
+							Gabriel Agness A.
 						</motion.h3>
 						<motion.div
 							variants={textVariant(0.4)}
