@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
 body {
 	/* @apply bg-black-bg; */
 	font-size: 0.938rem;
+	font-family: 'Montserrat', sans-serif;
 }
 
 button {
