@@ -415,7 +415,7 @@ export default function Home({ portfolios }) {
 						</motion.div>
 					</motion.div>
 
-					<div className="portfolio mt-20">
+					<div className="portfolio mt-40">
 						<motion.div
 							variants={staggerContainer}
 							initial="hidden"
@@ -430,7 +430,7 @@ export default function Home({ portfolios }) {
 							</motion.h2>
 							<motion.div
 								variants={rightVariant(0.4)}
-								className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mx-[auto]"
+								className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mb-20 mx-[auto]"
 							></motion.div>
 						</motion.div>
 
@@ -438,7 +438,7 @@ export default function Home({ portfolios }) {
 									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0.1 }}>
 										<motion.div
 											whileHover={{ borderRadius: 300 }}
-											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[620px] overflow-hidden cursor-pointer"
+											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] overflow-hidden cursor-pointer"
 											onClick={() => router.push(`/case-study/${p.slug.current}`)}
 										>
 											<motion.img
@@ -502,7 +502,7 @@ export default function Home({ portfolios }) {
 }
 
 export const getServerSideProps = async pageContext => {
-	const query = encodeURIComponent('*[ _type == "portfolio" ]');
+	const query = encodeURIComponent('*[ _type == "portfolio" ] | order(_createdAt desc) [0...3]');
 	const url = `https://r5dols4o.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then(res => res.json());
  
@@ -520,3 +520,4 @@ export const getServerSideProps = async pageContext => {
 	  }
 	}
  };
+ 

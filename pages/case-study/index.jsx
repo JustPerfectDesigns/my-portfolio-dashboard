@@ -65,7 +65,7 @@ const index = ({portfolios}) => {
 									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0.1 }}>
 										<motion.div
 											whileHover={{ borderRadius: 300 }}
-											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[620px] overflow-hidden cursor-pointer"
+											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] overflow-hidden cursor-pointer"
 											onClick={() => router.push(`/case-study/${p.slug.current}`)}
 										>
 											<motion.img
@@ -134,7 +134,7 @@ const index = ({portfolios}) => {
 // };
 
 export const getServerSideProps = async pageContext => {
-	const query = encodeURIComponent('*[ _type == "portfolio" ]');
+	const query = encodeURIComponent('*[ _type == "portfolio" ] | order(_createdAt desc)');
 	const url = `https://r5dols4o.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then(res => res.json());
  

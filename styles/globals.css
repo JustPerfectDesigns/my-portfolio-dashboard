@@ -29,7 +29,7 @@ button {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
 	background: transparent !important;
-	width: 0.6rem;
+	width: 0.4rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -84,4 +84,14 @@ button {
 @keyframes rotation {
 	from {transform: rotate(0deg);}
 	to {transform: rotate(359deg);}
+}
+
+::selection {
+	background-color: #45C87F;
+	color: white;
+}
+
+::-moz-selection {
+	background-color: #45C87F;
+	color: white;
 }

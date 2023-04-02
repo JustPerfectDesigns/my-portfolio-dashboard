@@ -42,8 +42,14 @@ module.exports = {
 					"80%": { transform: "translate(0)" },
 				},
 			},
+			
 			flexGrow : {
 				999: "999"
+			},
+
+			gridTemplateColumns: {
+				// Simple 16 column grid
+				'pgrid': 'minmax(min-content,max-content) 1fr',
 			},
 		},
 	},

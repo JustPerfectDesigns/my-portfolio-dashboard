@@ -155,6 +155,11 @@ export default {
           title: "Impact Title",
           type: "string"
         },
+        {
+          name: "impactDesc",
+          title: "Impact Description",
+          type: "string"
+        },
       ]
     },
   ],

@@ -3,7 +3,7 @@
     <style>
       .cls-1 {
         font-size: 55px;
-        fill: #121212;
+        fill: currentColor;
         font-family: Montserrat;
         font-weight: 700;
       }

@@ -5,8 +5,7 @@ import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { BsGear } from "react-icons/bs";
 import sidebarNav from "../data/sidebarNav";
-
-import GabLogo from "../public/images/gabby-logo.png"
+import { GabLogo } from "./svgs/gabby";
 import GabLogoWhite from "../public/images/gabby-logo-w.png"
 
 import Button from '@mui/material/Button';
@@ -68,26 +67,22 @@ const SideBar = () => {
 					<MdOutlineGridView className="text-[1.3rem]" />
 				</button>
 			</div>
-			<div
-				ref={sideBarRef}
-				className="dark:bg-black-sidebar bg-[#E8EDF2] w-[260px] space-y-10 px-9 pt-0 lg:pt-7 pb-7 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out flex flex-col justify-around child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0">
+				<div
+					ref={sideBarRef}
+					className="dark:bg-black-sidebar bg-[#FBFCFD] border-r-2 border-[#f2f2f2] dark:border-[#252528] w-[260px] space-y-10 px-9 pt-0 lg:pt-7 pb-7 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out flex flex-col justify-around child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0">
 				<div>
 
 				<div className="logo mb-12">
-					<Image
+					{/* <Image
 						src={GabLogoWhite}
 						width={100}
 						height={100}
 						alt="Gabriel Samuel Aina"
 						className="mb-4 w-[150px] light:invert"
-					/>
-					{/* <Image
-						src={GabLogo}
-						width={100}
-						height={100}
-						alt="Gabriel Samuel Aina"
-						className="mb-4 w-[150px] light:hidden"
 					/> */}
+
+					<GabLogo width={100}	height={100} className="mb-4 w-[150px] text-[#121212] dark:text-white"/>
+
 				</div>
 				<div className="flex flex-col justify-between h-4/5">
 					<div className="sidebar__top">

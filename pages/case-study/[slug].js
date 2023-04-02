@@ -3,12 +3,12 @@ import Link from "next/link";
 import { client, urlFor } from "../../lib/client";
 import Footer from "../../components/Footer"
 import {motion} from "framer-motion"
-import { fadeInUp, stagger, cardVariants, fadeDownVariant, fadeUp, slideIn, staggerContainer, textVariant, leftVariant, rightVariant, fadeIn, opacityVariant } from '../../utils/motion';
+import { fadeDownVariant, staggerContainer, textVariant, } from '../../utils/motion';
 
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 
-export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle, overviewDesc, overviewImg01, overviewImg02, overviewImg03, challengeSubTitle, challengeTitle, solutionSubTitle, solutionTitle, solutionDesc, littleDescSubTitle, littleDescTitle, impactSubTitle, impactTitle }) {
+export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle, overviewDesc, overviewImg01, overviewImg02, overviewImg03, challengeSubTitle, challengeTitle, challengeDesc, solutionSubTitle, solutionTitle, solutionDesc, littleDescSubTitle, littleDescTitle, impactSubTitle, impactTitle, impactDesc }) {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -20,20 +20,20 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
     setImageUrl(imgBuilder.image(image));
   }, [image]);
 
-  function bounceEase(x) {
-    const n1 = 7.5625;
-    const d1 = 2.75;
+  // function bounceEase(x) {
+  //   const n1 = 7.5625;
+  //   const d1 = 2.75;
   
-    if (x < 1 / d1) {
-      return n1 * x * x;
-    } else if (x < 2 / d1) {
-      return n1 * (x -= 1.5 / d1) * x + 0.75;
-    } else if (x < 2.5 / d1) {
-      return n1 * (x -= 2.25 / d1) * x + 0.9375;
-    } else {
-      return n1 * (x -= 2.625 / d1) * x + 0.984375;
-    }
-  }
+  //   if (x < 1 / d1) {
+  //     return n1 * x * x;
+  //   } else if (x < 2 / d1) {
+  //     return n1 * (x -= 1.5 / d1) * x + 0.75;
+  //   } else if (x < 2.5 / d1) {
+  //     return n1 * (x -= 2.25 / d1) * x + 0.9375;
+  //   } else {
+  //     return n1 * (x -= 2.625 / d1) * x + 0.984375;
+  //   }
+  // }
 
   function easeOutBounce(x) {
     const n1 = 7.5625;
@@ -129,7 +129,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
           <span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">{challengeSubTitle}</span>
           <div className="lg:col-span-3">
             <h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug mb-8 lg:-mt-4 font-semibold">{challengeTitle}</h2>
-            <p className="text-[#A9A9A9] md:text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p className="text-[#A9A9A9] md:text-[18px]">{challengeDesc}</p>
           </div>
           {/* <p className="text-[#A9A9A9] md:text-[18px]">{challengeDesc}</p> */}
         </motion.div>
@@ -186,7 +186,8 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         <motion.div variants={textVariant(.1)} className="lg:grid lg:grid-cols-4">
           <span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">{impactSubTitle}</span>
           <div className="lg:col-span-3">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug font-semibold lg:-mt-4">{impactTitle}</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug font-semibold mb-8 lg:-mt-4">{impactTitle}</h2>
+            <p className="text-[#A9A9A9] md:text-[18px]">{impactDesc}</p>
           </div>
         </motion.div>
       </motion.div>
@@ -239,6 +240,7 @@ export const getServerSideProps = async pageContext => {
         overviewImg03: portfolio.content.overviewImg03,
         challengeSubTitle: portfolio.content.challengeSubTitle,
         challengeTitle: portfolio.content.challengeTitle,
+        challengeDesc: portfolio.content.challengeDesc,
         solutionSubTitle: portfolio.content.solutionSubTitle,
         solutionTitle: portfolio.content.solutionTitle,
         solutionDesc: portfolio.content.solutionDesc,
@@ -246,6 +248,7 @@ export const getServerSideProps = async pageContext => {
         littleDescTitle: portfolio.content.littleDescTitle,
         impactSubTitle: portfolio.content.impactSubTitle,
         impactTitle: portfolio.content.impactTitle,
+        impactDesc: portfolio.content.impactDesc,
       }
     }
   }
