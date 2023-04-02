@@ -31,14 +31,14 @@ const index = () => {
 				>
 					<motion.h2
 						variants={textVariant(0.5)}
-						className="text-2xl md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center"
+						className="text-[2.2rem] md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center"
 					>
 						My Skills & Softwares
 					</motion.h2>
 
 					<motion.p
 						variants={textVariant(0.6)}
-						className="mt-8 mb-8 lg:text-[1.5rem] dark:text-white text-[#121212] font-light text-center leading-[1.6]"
+						className="mt-8 mb-8 text-[1.1rem] lg:text-[1.5rem] dark:text-white text-[#121212] font-light text-center leading-[1.6]"
 					>
 						Here are the skills and all the softwares I use so far, I keep
 						adding up my stacks though.

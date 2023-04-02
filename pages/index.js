@@ -99,7 +99,7 @@ export default function Home({ portfolios }) {
 						></motion.div>
 						<motion.h2
 							variants={textVariant(0.5)}
-							className="text-2xl md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center mt-8"
+							className="text-[2.2rem] md:text-3xl lg:text-6xl lg:leading-[1.6] dark:text-white text-[#121212] font-semibold text-center mt-8"
 						>
 							I’m a Front-End Developer with <br />
 							experience in UI & Graphics
@@ -107,7 +107,7 @@ export default function Home({ portfolios }) {
 
 						<motion.p
 							variants={textVariant(0.6)}
-							className="mt-8 lg:text-[1.5rem] dark:text-white text-[#121212] font-light text-center leading-[1.6]"
+							className="mt-8 text-[1.1rem] lg:text-[1.5rem] dark:text-white text-[#121212] font-light text-center leading-[1.6]"
 						>
 							Hello, I'm Gabriel Samuel Aina, My passion is to help businesses
 							succeed worldwide through my skills, knowledge, and dedication to
@@ -124,7 +124,7 @@ export default function Home({ portfolios }) {
 							>
 								<Link
 									href="/case-study"
-									className="py-5 px-8 bg-black-button text-white font-medium"
+									className="py-5 px-8 bg-black-button text-white font-semibold"
 								>
 									See My Work
 								</Link>
@@ -137,7 +137,7 @@ export default function Home({ portfolios }) {
 							>
 								<Link
 									href="/case-study"
-									className="py-5 px-8 bg-green-color-alt dark:bg-green-color text-white font-medium"
+									className="py-5 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
 								>
 									Download CV
 								</Link>
