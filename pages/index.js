@@ -85,7 +85,7 @@ export default function Home({ portfolios }) {
 						initial="hidden"
 						whileInView="show"
 						viewport={{ once: true, amount: 0.25 }}
-						className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem]"
+						className="w-full py-[5rem] md:py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem]"
 					>
 						<motion.h3
 							variants={textVariant(0.3)}
