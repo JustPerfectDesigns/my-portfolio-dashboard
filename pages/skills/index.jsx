@@ -26,7 +26,7 @@ const index = () => {
 					variants={staggerContainer}
 					initial="hidden"
 					whileInView="show"
-					viewport={{ once: false, amount: 0.25 }}
+					viewport={{ once: true, amount: 0.25 }}
 					className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative"
 				>
 					<motion.h2
@@ -52,7 +52,7 @@ const index = () => {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.28 }}
+						viewport={{ once: true, amount: 0.28 }}
 					>
 						<motion.h2
 							variants={leftVariant(0.3)}
@@ -69,7 +69,7 @@ const index = () => {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.9 }}
+						viewport={{ once: true, amount: 0.9 }}
 						className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
 					>
 						{frontendSkills.map((skill) => (
@@ -79,7 +79,7 @@ const index = () => {
 								variants={cardVariants}
 								initial="offscreen"
 								whileInView="onscreen"
-								viewport={{ once: false, amount: 0.6 }}
+								viewport={{ once: true, amount: 0.6 }}
 							>
 								<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
 									<motion.div
@@ -110,7 +110,7 @@ const index = () => {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.28 }}
+						viewport={{ once: true, amount: 0.28 }}
 					>
 						<motion.h2
 							variants={leftVariant(0.3)}
@@ -127,7 +127,7 @@ const index = () => {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.9 }}
+						viewport={{ once: true, amount: 0.9 }}
 						className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
 					>
 						{uiSkills.map((skill) => (
@@ -137,7 +137,7 @@ const index = () => {
 								variants={cardVariants}
 								initial="offscreen"
 								whileInView="onscreen"
-								viewport={{ once: false, amount: 0.6 }}
+								viewport={{ once: true, amount: 0.6 }}
 							>
 								<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
 									<motion.div
@@ -168,7 +168,7 @@ const index = () => {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.28 }}
+						viewport={{ once: true, amount: 0.28 }}
 					>
 						<motion.h2
 							variants={leftVariant(0.3)}
@@ -185,7 +185,7 @@ const index = () => {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.9 }}
+						viewport={{ once: true, amount: 0.9 }}
 						className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
 					>
 						{otherSkills.map((skill) => (
@@ -195,7 +195,7 @@ const index = () => {
 								variants={cardVariants}
 								initial="offscreen"
 								whileInView="onscreen"
-								viewport={{ once: false, amount: 0.6 }}
+								viewport={{ once: true, amount: 0.6 }}
 							>
 								<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
 									<motion.div

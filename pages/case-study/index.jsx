@@ -41,7 +41,7 @@ const index = ({portfolios}) => {
 		<motion.main className="t" exit={{opacity: 0}} initial={{opacity: 0}} animate={{opacity: 1}}>
 			<div className="containerr">
 				{/* {console.log(portfolio)} */}
-				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }} className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative">
+				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative">
 					<motion.h2 variants={textVariant(.5)} className="text-[2.2rem] md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center">
 						All My Projects
 					</motion.h2>
@@ -54,7 +54,7 @@ const index = ({portfolios}) => {
 				</motion.div>
 
 				<motion.div className="portfolio mt-20">
-				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: .35 }}>
+				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: .35 }}>
 							<motion.h2 variants={leftVariant(.6)} className="text-center text-2xl dark:text-white text-[#121212] font-medium">
 								Projects
 							</motion.h2>
@@ -62,7 +62,7 @@ const index = ({portfolios}) => {
 						</motion.div>
 							<motion.div className="portfolio__container mt-20">
 								{mappedPortfolio.length ? mappedPortfolio.map((p, index) => (
-									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0.1 }}>
+									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.1 }}>
 										<motion.div
 											whileHover={{ borderRadius: 300 }}
 											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] overflow-hidden cursor-pointer"

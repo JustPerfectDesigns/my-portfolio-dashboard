@@ -52,7 +52,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
 
   return (
     <motion.div className="" exit={{y: 70, opacity: 0}} initial={{y: 70, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 0.8, ease: easeOutBounce}}>
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="w-[100%] h-[50vh] lg:h-[60vh] overflow-hidden mb-20">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="w-[100%] h-[50vh] lg:h-[60vh] overflow-hidden mb-20">
         {imageUrl && <img
         src={imageUrl} alt={name}
         className="aspect-auto h-[100%] w-[auto] lg:w-[100%] object-cover"
@@ -60,16 +60,16 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         />}
       </motion.div>
 
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="lg:grid lg:grid-cols-4">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="lg:grid lg:grid-cols-4">
         <motion.div variants={textVariant(.6)} className="max-[1015px]:hidden flex justify-start items-center lg:col-span-1">
           <HiOutlineArrowLongDown className="bg-green-color p-5 lg:text-7xl text-[#121212] rounded-full" />
         </motion.div>
 
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="lg:col-span-3">
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="lg:col-span-3">
           <motion.h1 variants={fadeDownVariant(.6)} className="case-title text-6xl md:text-7xl lg:text-8xl font-semibold mb-14">{name}</motion.h1>
 
           {/* <div className="case-details grid grid-cols-2 gap-12"> */}
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="case-details flex justify-between flex-wrap gap-8 w-[90%] md:w-[80%] lg:w-[80%] md:gap-12">
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-details flex justify-between flex-wrap gap-8 w-[90%] md:w-[80%] lg:w-[80%] md:gap-12">
             <motion.div variants={textVariant(.6)} className="w-[70%] lg:w-[280px]">
               <span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">Role</span>
               <p className="uppercase text-[15px] md:text-[18px]">BRANDING, CREATIVE DIRECTION, VISUAL IDENTITY</p>
@@ -88,7 +88,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
 
       {/* {console.log(currentPortfolio)} */}
 
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="case-overview mt-36 lg:mt-56">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-overview mt-36 lg:mt-56">
         <motion.div variants={textVariant(.1)} className="lg:grid lg:grid-cols-4">
           <span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 lg:mb-0 block font-semibold lg:col-span-1">{overviewSubTitle}</span>
           <div className="lg:col-span-3">
@@ -124,7 +124,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         </motion.div>
       </motion.div>
 
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="case-challenge mt-36 lg:mt-56">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-challenge mt-36 lg:mt-56">
         <motion.div variants={textVariant(.1)} className="lg:grid lg:grid-cols-4">
           <span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">{challengeSubTitle}</span>
           <div className="lg:col-span-3">
@@ -140,7 +140,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         </motion.div>
       </motion.div>
 
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="case-solution mt-36 lg:mt-56">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-solution mt-36 lg:mt-56">
         <motion.div variants={textVariant(.1)} className="lg:grid lg:grid-cols-4">
           <span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">{solutionSubTitle}</span>
           <div className="lg:col-span-3">
@@ -171,7 +171,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         </motion.div>
       </motion.div>
       
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="case-little-details mt-36 lg:mt-56">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-little-details mt-36 lg:mt-56">
         <motion.span variants={textVariant(.1)} className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 flex text-center justify-center items-center font-semibold">{littleDescSubTitle}</motion.span>
         <motion.div variants={textVariant(.1)}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug mb-8 font-semibold text-center">{littleDescTitle}</h2>
@@ -182,7 +182,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         </motion.div>
       </motion.div>
 
-      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="case-impact mt-36 lg:mt-56">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-impact mt-36 lg:mt-56">
         <motion.div variants={textVariant(.1)} className="lg:grid lg:grid-cols-4">
           <span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">{impactSubTitle}</span>
           <div className="lg:col-span-3">
@@ -193,7 +193,7 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
       </motion.div>
 
       {/* Render a link to the next portfolio item */}
-      {/* <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.1 }} className="mt-40 w-[100%] h-[350px] lg:h-[650px] bg-black-container flex justify-center items-center flex-col gap-6">
+      {/* <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="mt-40 w-[100%] h-[350px] lg:h-[650px] bg-black-container flex justify-center items-center flex-col gap-6">
         <motion.span variants={textVariant(.1)} className="flex text-center text-[#A9A9A9] font-semibold">Next Project</motion.span>
         <motion.div variants={textVariant(.1)}>
           <Link href={`/case-study/${nextPortfolio._id}`} passHref className="text-4xl lg:text-7xl font-semibold flex justify-center items-center text-center">

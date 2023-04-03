@@ -4,7 +4,7 @@ import { fadeInUp, stagger, cardVariants, fadeDown, fadeUp, slideIn, staggerCont
 
 const Footer = () => {
 	return (
-		<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: .25 }} className="mt-[17rem] mb-[17rem]">
+		<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: .25 }} className="mt-[17rem] mb-[17rem]">
 			<motion.h2 variants={textVariant(.3)} className="text-5xl md:text-7xl font-medium text-center dark:text-white text-[#121212] mb-12">
 				Let's talk.
 			</motion.h2>

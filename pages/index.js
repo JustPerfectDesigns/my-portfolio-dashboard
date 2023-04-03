@@ -39,7 +39,7 @@ export default function Home({ portfolios }) {
 			projectId: 'r5dols4o',
 			dataset: 'production',
 		 });
- 
+
 		 setMappedPortfolio(
 			portfolios.map(p => {
 			  return {
@@ -63,7 +63,7 @@ export default function Home({ portfolios }) {
 	if (!mounted) return null;
 	const currentTheme = theme === "system" ? systemTheme : theme;
 
- 
+
 
 	return (
 		<div className="font-sans">
@@ -84,7 +84,7 @@ export default function Home({ portfolios }) {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.25 }}
+						viewport={{ once: true, amount: 0.25 }}
 						className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem]"
 					>
 						<motion.h3
@@ -150,7 +150,7 @@ export default function Home({ portfolios }) {
 							variants={staggerContainer}
 							initial="hidden"
 							whileInView="show"
-							viewport={{ once: false, amount: 0.6 }}
+							viewport={{ once: true, amount: 0.6 }}
 						>
 							<motion.h2
 								variants={leftVariant(0.6)}
@@ -171,7 +171,7 @@ export default function Home({ portfolios }) {
 										variants={staggerContainer}
 										initial="hidden"
 										whileInView="show"
-										viewport={{ once: false, amount: 0.8 }}
+										viewport={{ once: true, amount: 0.8 }}
 									>
 										<Tab.List className="flex flex-wrap justify-center gap-12">
 											{tabNav.map((tab) => (
@@ -203,7 +203,7 @@ export default function Home({ portfolios }) {
 												variants={staggerContainer}
 												initial="hidden"
 												whileInView="show"
-												viewport={{ once: false, amount: 0.9 }}
+												viewport={{ once: true, amount: 0.9 }}
 												className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
 											>
 												{frontendSkills.map((skill) => (
@@ -213,7 +213,7 @@ export default function Home({ portfolios }) {
 														variants={cardVariants}
 														initial="offscreen"
 														whileInView="onscreen"
-														viewport={{ once: false, amount: 0.9 }}
+														viewport={{ once: true, amount: 0.9 }}
 													>
 														<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
 															<motion.div
@@ -242,7 +242,7 @@ export default function Home({ portfolios }) {
 											variants={staggerContainer}
 											initial="hidden"
 											whileInView="show"
-											viewport={{ once: false, amount: 0.9 }}
+											viewport={{ once: true, amount: 0.9 }}
 											className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
 										>
 											{uiSkills.map((skill) => (
@@ -252,7 +252,7 @@ export default function Home({ portfolios }) {
 													variants={cardVariants}
 													initial="offscreen"
 													whileInView="onscreen"
-													viewport={{ once: false, amount: 0.6 }}
+													viewport={{ once: true, amount: 0.6 }}
 												>
 													<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
 														<motion.div
@@ -280,7 +280,7 @@ export default function Home({ portfolios }) {
 											variants={staggerContainer}
 											initial="hidden"
 											whileInView="show"
-											viewport={{ once: false, amount: 0.9 }}
+											viewport={{ once: true, amount: 0.9 }}
 											className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
 										>
 											{otherSkills.map((skill) => (
@@ -290,7 +290,7 @@ export default function Home({ portfolios }) {
 													variants={cardVariants}
 													initial="offscreen"
 													whileInView="onscreen"
-													viewport={{ once: false, amount: 0.6 }}
+													viewport={{ once: true, amount: 0.6 }}
 												>
 													<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
 														<motion.div
@@ -324,14 +324,14 @@ export default function Home({ portfolios }) {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.9 }}
+						viewport={{ once: true, amount: 0.9 }}
 						className="about lg:hidden lg:flex lg:gap-12 lg:items-center lg:justify-center lg:mx-[auto] lg:w-[75%]"
 					>
 						<motion.div
 							variants={cardVariants}
 							initial="offscreen"
 							whileInView="onscreen"
-							viewport={{ once: false, amount: 0.6 }}
+							viewport={{ once: true, amount: 0.6 }}
 							className="img h-[380px] md:h-[510px] lg:h-[600px] justify-center items-center rounded-t-[258px] rounded-b-[16px] overflow-hidden mx-[auto]"
 						>
 							<Image
@@ -344,7 +344,7 @@ export default function Home({ portfolios }) {
 							variants={cardVariants}
 							initial="offscreen"
 							whileInView="onscreen"
-							viewport={{ once: false, amount: 0.6 }}
+							viewport={{ once: true, amount: 0.6 }}
 							className="about__content"
 						>
 							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-medium">
@@ -376,7 +376,7 @@ export default function Home({ portfolios }) {
 						variants={staggerContainer}
 						initial="hidden"
 						whileInView="show"
-						viewport={{ once: false, amount: 0.25 }}
+						viewport={{ once: true, amount: 0.25 }}
 						className="about hidden lg:block lg:flex lg:gap-12 lg:items-center lg:justify-center lg:mx-[auto] lg:w-[75%] lg:mt-10"
 					>
 						<motion.div
@@ -420,7 +420,7 @@ export default function Home({ portfolios }) {
 							variants={staggerContainer}
 							initial="hidden"
 							whileInView="show"
-							viewport={{ once: false, amount: 0.4 }}
+							viewport={{ once: true, amount: 0.4 }}
 						>
 							<motion.h2
 								variants={leftVariant(0.4)}
@@ -435,16 +435,16 @@ export default function Home({ portfolios }) {
 						</motion.div>
 
 						{mappedPortfolio.length ? mappedPortfolio.map((p, index) => (
-									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: false, amount: 0.1 }}>
+									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.1 }}>
 										<motion.div
 											whileHover={{ borderRadius: 300 }}
-											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] overflow-hidden cursor-pointer"
+											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] bg-contain overflow-hidden cursor-pointer"
 											onClick={() => router.push(`/case-study/${p.slug.current}`)}
 										>
 											<motion.img
 												src={p.image}
 												alt={p.name}
-												className="h-[100%] w-[auto] aspect-auto"
+												className="h-[100%] w-[100%] bg-contain aspect-auto"
 												whileHover={{ scale: 1.1 }}
 												transition={{
 													type: "spring",

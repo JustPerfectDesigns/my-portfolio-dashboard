@@ -8,7 +8,7 @@ const index = () => {
 	return (
 		<motion.main exit={{opacity: 0}} initial={{opacity: 0}} animate={{opacity: 1}}>
 			<div className="containerr">
-				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }} className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative">
+				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative">
 					<motion.h2 variants={textVariant(.5)} className="text-[2.2rem] md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center">
 						About Me
 					</motion.h2>
@@ -20,7 +20,7 @@ const index = () => {
 					<FloatingAnimation />
 				</motion.div>
 
-				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.28 }} className="mt-20 sm:max-w-[80%] mx-[auto]">
+				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.28 }} className="mt-20 sm:max-w-[80%] mx-[auto]">
 					<motion.p variants={textVariant(.3)} className="text-gray-600 dark:text-black-text mb-20">Nice to meet you 🤝</motion.p>
 					<motion.h3 variants={textVariant(.4)} className="text-3xl lg:text-6xl text-[#121212] dark:text-white font-medium mb-6 leading-10 lg:leading-tight">
 						I'm Gabriel Samuel Aina, a talented and experienced frontend developer, graphic designer, and UI/UX designer from Nigeria. With over a decade of experience in the graphic design industry,
