@@ -42,7 +42,7 @@ const index = ({portfolios}) => {
 			<div className="containerr">
 				{/* {console.log(portfolio)} */}
 				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative">
-					<motion.h2 variants={textVariant(.5)} className="text-[2.2rem] md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center">
+					<motion.h2 variants={textVariant(.5)} className="text-[2.2rem] md:text-3xl lg:text-6xl leading-10 lg:leading-[1.3] dark:text-white text-[#121212] font-semibold text-center">
 						All My Projects
 					</motion.h2>
 

@@ -77,7 +77,7 @@ const SideBar = () => {
 				</Link>
 				<div className="flex flex-col justify-between h-4/5">
 					<div className="sidebar__top">
-						<span className="menu-desc block text-[.65rem] uppercase mb-5 dark:text-navlink-color text-[#121212]">
+						<span className="menu-desc block text-[.65rem] uppercase mb-5 font-semibold dark:text-navlink-color text-[#121212]">
 							Menu Items
 						</span>
 						<ul className="menu__items grid gap-8">
@@ -92,10 +92,10 @@ const SideBar = () => {
 								>
 									<Link href={nav.link} passHref onClick={navClickHideSidebar}>
 										<div className="navLink flex items-center gap-3">
-											<div className="navLink-icon text-base text-green-color">
+											<div className="navLink-icon text-[16px] text-green-color">
 												{nav.icon}
 											</div>
-											<span className="navLink-name block text-sm">
+											<span className="navLink-name block text-[16px]">
 												{nav.text}
 											</span>
 										</div>
@@ -112,7 +112,7 @@ const SideBar = () => {
 					<div>
 
 					<div className="sidebar__bottom">
-						<span className="menu-desc block text-[.65rem] uppercase mb-5 dark:text-navlink-color text-[#121212]">
+						<span className="menu-desc block text-[.65rem] uppercase mb-5 font-semibold dark:text-navlink-color text-[#121212]">
 							Switch Theme
 						</span>
 						<div className="menu__items">

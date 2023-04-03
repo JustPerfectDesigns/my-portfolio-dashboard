@@ -31,7 +31,7 @@ const index = () => {
 				>
 					<motion.h2
 						variants={textVariant(0.5)}
-						className="text-[2.2rem] md:text-3xl lg:text-6xl leading-[1.6] dark:text-white text-[#121212] font-semibold text-center"
+						className="text-[2.2rem] md:text-3xl lg:text-6xl leading-10 lg:leading-[1.3] dark:text-white text-[#121212] font-semibold text-center"
 					>
 						My Skills & Softwares
 					</motion.h2>

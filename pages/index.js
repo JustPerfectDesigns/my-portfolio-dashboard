@@ -99,7 +99,7 @@ export default function Home({ portfolios }) {
 						></motion.div>
 						<motion.h2
 							variants={textVariant(0.5)}
-							className="text-[2.2rem] md:text-3xl lg:text-6xl lg:leading-[1.6] dark:text-white text-[#121212] font-semibold text-center mt-8"
+							className="text-[2.2rem] md:text-3xl lg:text-6xl leading-10 lg:leading-[1.3] dark:text-white text-[#121212] font-semibold text-center mt-8"
 						>
 							I’m a Front-End Developer with <br />
 							experience in UI & Graphics
@@ -115,7 +115,7 @@ export default function Home({ portfolios }) {
 						</motion.p>
 						<motion.div
 							variants={textVariant(0.7)}
-							className="mt-12 flex flex-wrap gap-y-12 gap-x-4 justify-center"
+							className="mt-24 flex flex-wrap gap-y-12 gap-x-4 justify-center"
 						>
 							<motion.div
 								whileHover={{ scale: 1.2 }}
