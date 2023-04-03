@@ -1,36 +1,36 @@
-import { RiLightbulbLine } from "react-icons/ri";
-import { BiWallet, BiDuplicate, BiUserCircle } from "react-icons/bi";
-import { TbId, TbTicket } from "react-icons/tb";
+import { RiBriefcase2Line, RiArticleLine, RiYoutubeLine } from "react-icons/ri";
+import { RxDashboard } from "react-icons/rx";
+import { HiOutlineUser, HiCode } from "react-icons/hi";
 
 const sidebarNav = [
 	{
 		link: "/",
-		icon: <RiLightbulbLine />,
+		icon: <RxDashboard />,
 		text: "Dashboard",
 	},
 	{
 		link: "/case-study",
-		icon: <BiWallet />,
+		icon: <RiBriefcase2Line />,
 		text: "Case Studies",
 	},
 	{
 		link: "/about",
-		icon: <BiUserCircle />,
+		icon: <HiOutlineUser />,
 		text: "About Me",
 	},
 	{
 		link: "/skills",
-		icon: <BiDuplicate />,
+		icon: <HiCode />,
 		text: "Skills & Softwares",
 	},
 	// {
 	// 	link: "/youtube",
-	// 	icon: <TbId />,
+	// 	icon: <RiYoutubeLine />,
 	// 	text: "YouTube Channel",
 	// },
 	{
 		link: "/post",
-		icon: <TbTicket />,
+		icon: <RiArticleLine />,
 		text: "My Blog",
 	},
 ];

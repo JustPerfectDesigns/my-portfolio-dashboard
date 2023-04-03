@@ -455,13 +455,13 @@ export default function Home({ portfolios }) {
 										</motion.div>
 										<div className="work__content flex flex-wrap lg:flex-no-wrap gap-4 items-start justify-start mt-8 lg:mt-14">
 												<div className="work__detail flex justify-start items-center gap-4 min-w-[270px] lg:min-w-[200px]">
-													<span className="dark:text-white text-[#121212] text-sm">
+													<span className="dark:text-white text-[#121212] text-sm font-medium">
 														{p.type}
 													</span>
 													<div className="line w-[40px] h-[1px] bg-[#4F4F54]"></div>
 												</div>
 												<div className="work__name">
-													<h3 className="dark:text-white text-[#121212] text-4xl lg:text-6xl lg:mt-[-6px] font-medium">
+													<h3 className="dark:text-white text-[#121212] text-3xl md:text-4xl lg:text-6xl lg:mt-[-6px] font-semibold">
 														{p.name}
 													</h3>
 													<p className="desc mt-1 text-[#7E7E86] text-sm leading-[1.6] lg:max-w-[500px] lg:ml-[5px] lg:mt-6">
@@ -471,7 +471,7 @@ export default function Home({ portfolios }) {
 											</div>
 											<div className="line w-[100%] h-[1px] bg-[#4F4F54] mt-24 mb-10 mx-[auto]"></div>
 									</motion.article>
-								)) : <>No Posts Yet</>}
+								)) : <>No Works Yet</>}
 
 						<div
 							whileHover={{ scale: 1.2 }}
