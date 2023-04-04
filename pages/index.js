@@ -154,7 +154,7 @@ export default function Home({ portfolios }) {
 						>
 							<motion.h2
 								variants={leftVariant(0.6)}
-								className="text-center text-2xl dark:text-white text-[#121212] font-medium"
+								className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
 							>
 								My Skills
 							</motion.h2>
@@ -347,7 +347,7 @@ export default function Home({ portfolios }) {
 							viewport={{ once: true, amount: 0.6 }}
 							className="about__content"
 						>
-							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-medium">
+							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-semibold">
 								Who Is Gabriel, and Why Him?
 							</h2>
 							<div className="line w-[100px] h-[1px] mx-[auto] lg:mx-[unset] bg-green-color-alt dark:bg-green-color mt-4 mb-10"></div>
@@ -363,7 +363,7 @@ export default function Home({ portfolios }) {
 								>
 									<Link
 										href="/about"
-										className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white"
+										className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
 									>
 										Read More
 									</Link>
@@ -390,7 +390,7 @@ export default function Home({ portfolios }) {
 							/>
 						</motion.div>
 						<motion.div variants={rightVariant(0.3)} className="about__content">
-							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-medium">
+							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-semibold">
 								Who Is Gabriel, and Why Him?
 							</h2>
 							<div className="line w-[100px] h-[1px] mx-[auto] lg:mx-[unset] bg-green-color-alt dark:bg-green-color mt-4 mb-10"></div>
@@ -406,7 +406,7 @@ export default function Home({ portfolios }) {
 								>
 									<Link
 										href="/about"
-										className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white"
+										className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
 									>
 										Read More
 									</Link>
@@ -424,7 +424,7 @@ export default function Home({ portfolios }) {
 						>
 							<motion.h2
 								variants={leftVariant(0.4)}
-								className="text-center text-2xl dark:text-white text-[#121212] font-medium"
+								className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
 							>
 								My Work
 							</motion.h2>
@@ -486,7 +486,7 @@ export default function Home({ portfolios }) {
 							>
 								<Link
 									href="/case-study"
-									className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white"
+									className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
 								>
 									See All Work
 								</Link>

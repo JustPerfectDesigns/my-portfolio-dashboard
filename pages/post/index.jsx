@@ -48,7 +48,7 @@ const index = ({ posts }) => {
 				</motion.div>
 
 				<motion.div className="mt-20" variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: .2 }}>
-					<motion.h2 variants={leftVariant(.6)} className="text-center text-2xl dark:text-white text-[#121212] font-medium">
+					<motion.h2 variants={leftVariant(.6)} className="text-center text-2xl dark:text-white text-[#121212] font-semibold">
 						I Blog Too ✌️
 					</motion.h2>
 					<motion.div variants={rightVariant(.6)} className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mx-[auto]"></motion.div>

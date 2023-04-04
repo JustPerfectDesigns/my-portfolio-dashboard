@@ -22,7 +22,7 @@ const index = () => {
 
 				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.28 }} className="mt-20 sm:max-w-[80%] mx-[auto]">
 					<motion.p variants={textVariant(.3)} className="text-gray-600 dark:text-black-text mb-20">Nice to meet you 🤝</motion.p>
-					<motion.h3 variants={textVariant(.4)} className="text-3xl lg:text-6xl text-[#121212] dark:text-white font-medium mb-6 leading-10 lg:leading-tight">
+					<motion.h3 variants={textVariant(.4)} className="text-3xl lg:text-6xl text-[#121212] dark:text-white font-semibold mb-6 leading-10 lg:leading-tight">
 						I'm Gabriel Samuel Aina, a talented and experienced frontend developer, graphic designer, and UI/UX designer from Nigeria. With over a decade of experience in the graphic design industry,
 					</motion.h3>
 					<motion.p variants={textVariant(.6)} className="text-gray-600 dark:text-black-text lg:text-[18px] lg:leading-10">

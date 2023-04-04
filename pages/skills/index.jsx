@@ -56,7 +56,7 @@ const index = () => {
 					>
 						<motion.h2
 							variants={leftVariant(0.3)}
-							className="text-center text-2xl dark:text-white text-[#121212] font-medium"
+							className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
 						>
 							Front-End Skills
 						</motion.h2>
@@ -94,7 +94,7 @@ const index = () => {
 										{skill.icon}
 									</motion.div>
 								</div>
-								<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212]">
+								<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212] font-semibold">
 									{skill.title}
 								</h3>
 								<span className="skills__subtitle text-[.6rem] text-[#666666]">
@@ -114,7 +114,7 @@ const index = () => {
 					>
 						<motion.h2
 							variants={leftVariant(0.3)}
-							className="text-center text-2xl dark:text-white text-[#121212] font-medium"
+							className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
 						>
 							Ui/Ux Tools
 						</motion.h2>
@@ -152,7 +152,7 @@ const index = () => {
 										{skill.icon}
 									</motion.div>
 								</div>
-								<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212]">
+								<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212] font-semibold">
 									{skill.title}
 								</h3>
 								<span className="skills__subtitle text-[.6rem] text-[#666666]">
@@ -172,7 +172,7 @@ const index = () => {
 					>
 						<motion.h2
 							variants={leftVariant(0.3)}
-							className="text-center text-2xl dark:text-white text-[#121212] font-medium"
+							className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
 						>
 							Others
 						</motion.h2>
@@ -210,7 +210,7 @@ const index = () => {
 										{skill.icon}
 									</motion.div>
 								</div>
-								<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212]">
+								<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212] font-semibold">
 									{skill.title}
 								</h3>
 								<span className="skills__subtitle text-[.6rem] text-[#666666]">

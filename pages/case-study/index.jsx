@@ -55,7 +55,7 @@ const index = ({portfolios}) => {
 
 				<motion.div className="portfolio mt-20">
 				<motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: .35 }}>
-							<motion.h2 variants={leftVariant(.6)} className="text-center text-2xl dark:text-white text-[#121212] font-medium">
+							<motion.h2 variants={leftVariant(.6)} className="text-center text-2xl dark:text-white text-[#121212] font-semibold">
 								Projects
 							</motion.h2>
 							<motion.div variants={rightVariant(.6)} className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mx-[auto]"></motion.div>
@@ -88,7 +88,7 @@ const index = ({portfolios}) => {
 													<div className="line w-[40px] h-[1px] bg-[#4F4F54]"></div>
 												</div>
 												<div className="work__name">
-													<h3 className="dark:text-white text-[#121212] text-4xl lg:text-6xl lg:mt-[-6px] font-medium">
+													<h3 className="dark:text-white text-[#121212] text-3xl md:text-4xl lg:text-6xl lg:mt-[-6px] font-semibold">
 														{p.name}
 													</h3>
 													<p className="desc mt-1 text-[#7E7E86] text-sm leading-[1.6] lg:max-w-[500px] lg:ml-[5px] lg:mt-6">

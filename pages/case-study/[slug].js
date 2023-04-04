@@ -98,29 +98,29 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
         </motion.div>
 
         <motion.div variants={textVariant(.1)} className="case-overview-images mt-36 lg:mt-56">
+          <div className="w-[100%] h-[192.600] md:h-[350px] lg:h-[650px] overflow-hidden mb-7 md:mb-0 lg:mb-12">
+            <img
+              src={urlFor(overviewImg01)}
+              alt={name}
+              className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
+            />
+          </div>
           <div className="md:flex md:gap-x-7 lg:gap-x-12">
             <div className="w-[100%] h-[350px] lg:h-[650px] overflow-hidden mb-7 md:-mb-0">
-              <img
-                src={urlFor(overviewImg01)}
-                alt={name}
-                className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
-              />
-            </div>
-            <div className="w-[100%] h-[350px] lg:h-[650px] overflow-hidden">
               <img
                 src={urlFor(overviewImg02)}
                 alt={name}
                 className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
               />
             </div>
-          </div>
-            <div className="w-[100%] h-[350px] lg:h-[650px] overflow-hidden mt-7 md:mb-0 lg:mt-12">
+            <div className="w-[100%] h-[350px] lg:h-[650px] overflow-hidden">
               <img
                 src={urlFor(overviewImg03)}
                 alt={name}
                 className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
-              />
+                />
             </div>
+          </div>
         </motion.div>
       </motion.div>
 
