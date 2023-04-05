@@ -38,6 +38,29 @@ export default {
       type: 'object',
       fields: [
         {
+          name: "role",
+          title: "Role Played",
+          type: "string"
+        },
+        {
+          name: "year",
+          title: "Year Created",
+          type: "string"
+        },
+        {
+          name: "niche",
+          title: "Company Niche",
+          type: "string"
+        },
+        {
+          name: "link",
+          title: "Project Link",
+          type: "url",
+          validation: Rule => Rule.uri({
+            scheme: ['http', 'https', 'mailto', 'tel']
+          })
+        },
+        {
           name: "overviewSubTitle",
           title: "Overview Sub Title",
           type: "string"

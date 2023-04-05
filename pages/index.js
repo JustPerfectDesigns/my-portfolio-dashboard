@@ -136,11 +136,15 @@ export default function Home({ portfolios }) {
 								transition={{ type: "spring", stiffness: 400, damping: 17 }}
 							>
 								<Link
-									href="/case-study"
+									href="../resume/GabrielResume.pdf"
 									className="py-5 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
+									download={"Gabriel Samuel A CV"}
+									target="_blank"
 								>
 									Download CV
 								</Link>
+								{/* <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" ><button>Download CV</button></a> */}
+
 							</motion.div>
 						</motion.div>
 					</motion.div>

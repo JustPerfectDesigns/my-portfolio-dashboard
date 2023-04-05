@@ -92,10 +92,10 @@ const SideBar = () => {
 								>
 									<Link href={nav.link} passHref onClick={navClickHideSidebar}>
 										<div className="navLink flex items-center gap-3">
-											<div className="navLink-icon text-[16px] text-green-color">
+											<div className="navLink-icon text-[16px] lg:text-sm text-green-color">
 												{nav.icon}
 											</div>
-											<span className="navLink-name block text-[16px]">
+											<span className="navLink-name block text-[16px] lg:text-sm">
 												{nav.text}
 											</span>
 										</div>

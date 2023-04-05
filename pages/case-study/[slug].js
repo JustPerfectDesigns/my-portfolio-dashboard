@@ -1,4 +1,4 @@
-import {HiOutlineArrowLongDown} from "react-icons/hi2"
+import {RiExternalLinkLine} from "react-icons/ri"
 import Link from "next/link";
 import { client, urlFor } from "../../lib/client";
 import Footer from "../../components/Footer"
@@ -7,8 +7,9 @@ import { fadeDownVariant, staggerContainer, textVariant, } from '../../utils/mot
 
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
+import { NumberCircleThree } from "phosphor-react";
 
-export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle, overviewDesc, overviewImg01, overviewImg02, overviewImg03, challengeSubTitle, challengeTitle, challengeDesc, solutionSubTitle, solutionTitle, solutionDesc, littleDescSubTitle, littleDescTitle, impactSubTitle, impactTitle, impactDesc }) {
+export default function CaseStudy({ image, name, role, year, niche, link, overviewSubTitle, overviewTitle, overviewDesc, overviewImg01, overviewImg02, overviewImg03, challengeSubTitle, challengeTitle, challengeDesc, solutionSubTitle, solutionTitle, solutionDesc, littleDescSubTitle, littleDescTitle, impactSubTitle, impactTitle, impactDesc }) {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -62,7 +63,9 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
 
       <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="lg:grid lg:grid-cols-4">
         <motion.div variants={textVariant(.6)} className="max-[1015px]:hidden flex justify-start items-center lg:col-span-1">
-          <HiOutlineArrowLongDown className="bg-green-color p-5 lg:text-7xl text-[#121212] rounded-full" />
+          <a href={link} target="_blank">
+            <RiExternalLinkLine className="bg-green-color p-5 lg:text-7xl text-[#121212] rounded-full" />
+          </a>
         </motion.div>
 
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="lg:col-span-3">
@@ -72,15 +75,15 @@ export default function CaseStudy({ image, name, overviewSubTitle, overviewTitle
           <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="case-details flex justify-between flex-wrap gap-8 w-[90%] md:w-[80%] lg:w-[80%] md:gap-12">
             <motion.div variants={textVariant(.6)} className="w-[70%] lg:w-[280px]">
               <span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">Role</span>
-              <p className="uppercase text-[15px] md:text-[18px]">BRANDING, CREATIVE DIRECTION, VISUAL IDENTITY</p>
+              <p className="uppercase text-[15px] md:text-[18px]">{role}</p>
             </motion.div>
             <motion.div variants={textVariant(.6)} className="">
               <span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">Year</span>
-              <p className="uppercase text-[15px] md:text-[18px]">2021</p>
+              <p className="uppercase text-[15px] md:text-[18px]">{year}</p>
             </motion.div>
             <motion.div variants={textVariant(.6)}>
               <span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">Niche</span>
-              <p className="uppercase text-[15px] md:text-[18px]">Medical</p>
+              <p className="uppercase text-[15px] md:text-[18px]">{niche}</p>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -232,6 +235,10 @@ export const getServerSideProps = async pageContext => {
       props: {
         name: portfolio.name,
         image: portfolio.image,
+        role: portfolio.content.role,
+        year: portfolio.content.year,
+        niche: portfolio.content.niche,
+        link: portfolio.content.link,
         overviewSubTitle: portfolio.content.overviewSubTitle,
         overviewTitle: portfolio.content.overviewTitle,
         overviewDesc: portfolio.content.overviewDesc,
