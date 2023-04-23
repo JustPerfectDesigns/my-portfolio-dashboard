@@ -83,7 +83,7 @@ export default function Home({ portfolios }) {
 						initial="hidden"
 						whileInView="show"
 						viewport={{ once: true, amount: 0.25 }}
-						className="w-full py-[5rem] md:py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem]"
+						className="w-full py-[5rem] md:py-[7rem] dark:bg-black-container bg-[#F0F2F4] px-6 lg:px-[6rem]"
 					>
 						<motion.h3
 							variants={textVariant(0.3)}
@@ -134,9 +134,9 @@ export default function Home({ portfolios }) {
 								transition={{ type: "spring", stiffness: 400, damping: 17 }}
 							>
 								<Link
-									href="../resume/GabrielResume.pdf"
+									href="../resume/GABRIEL-SAMUEL-AINA-CV-RESUME.zip"
 									className="py-5 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
-									download={"Gabriel Samuel A CV"}
+									download={"GABRIEL SAMUEL AINA - Dark and Light CV/Resume"}
 									target="_blank"
 								>
 									Download CV
@@ -216,7 +216,7 @@ export default function Home({ portfolios }) {
 														whileInView="onscreen"
 														viewport={{ once: true, amount: 0.9 }}
 													>
-														<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
+														<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F0F2F4] rounded-[3rem] place-items-center mb-4">
 															<motion.div
 																className="text-[2.8rem]"
 																whileHover={{ scale: 1.1 }}
