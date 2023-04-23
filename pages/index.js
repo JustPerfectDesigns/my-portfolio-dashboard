@@ -13,8 +13,8 @@ import uiSkills from "./../data/uiSkills";
 import otherSkills from "./../data/otherSkills";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { useRouter } from 'next/router';
-import imageUrlBuilder from '@sanity/image-url';
+import { useRouter } from "next/router";
+import imageUrlBuilder from "@sanity/image-url";
 import { motion } from "framer-motion";
 import {
 	cardVariants,
@@ -34,23 +34,23 @@ export default function Home({ portfolios }) {
 	const [mappedPortfolio, setMappedPortfolio] = useState([]);
 
 	useEffect(() => {
-	  if (portfolios.length) {
-		 const imgBuilder = imageUrlBuilder({
-			projectId: 'r5dols4o',
-			dataset: 'production',
-		 });
+		if (portfolios.length) {
+			const imgBuilder = imageUrlBuilder({
+				projectId: "r5dols4o",
+				dataset: "production",
+			});
 
-		 setMappedPortfolio(
-			portfolios.map(p => {
-			  return {
-				 ...p,
-				 image: imgBuilder.image(p.image),
-			  }
-			})
-		 );
-	  } else {
-		 setMappedPortfolio([]);
-	  }
+			setMappedPortfolio(
+				portfolios.map((p) => {
+					return {
+						...p,
+						image: imgBuilder.image(p.image),
+					};
+				})
+			);
+		} else {
+			setMappedPortfolio([]);
+		}
 	}, [portfolios]);
 
 	const { systemTheme, theme, setTheme } = useTheme();
@@ -62,8 +62,6 @@ export default function Home({ portfolios }) {
 
 	if (!mounted) return null;
 	const currentTheme = theme === "system" ? systemTheme : theme;
-
-
 
 	return (
 		<div className="font-sans">
@@ -144,7 +142,6 @@ export default function Home({ portfolios }) {
 									Download CV
 								</Link>
 								{/* <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" ><button>Download CV</button></a> */}
-
 							</motion.div>
 						</motion.div>
 					</motion.div>
@@ -251,7 +248,8 @@ export default function Home({ portfolios }) {
 										>
 											{uiSkills.map((skill) => (
 												<motion.div
-													key={skill.id} items-center
+													key={skill.id}
+													items-center
 													className="skills__data flex flex-col justify-start items-center text-center"
 													variants={cardVariants}
 													initial="offscreen"
@@ -356,7 +354,14 @@ export default function Home({ portfolios }) {
 							</h2>
 							<div className="line w-[100px] h-[1px] mx-[auto] lg:mx-[unset] bg-green-color-alt dark:bg-green-color mt-4 mb-10"></div>
 							<p className="dark:text-white text-[#121212] text-center lg:text-left font-normal leading-[1.8] mb-14">
-								Hi, I'm Gabriel Samuel Aina, a creative professional from Nigeria with over a decade of experience in graphic design, UI/UX design, and frontend development. I have worked with top brands in Nigeria, such as Jumia, and clients from around the world. Despite facing financial challenges as a teenager, I have built a successful career and I'm committed to delivering high-quality work while staying up-to-date with the latest trends in the industry.
+								Hi, I'm Gabriel Samuel Aina, a creative professional from
+								Nigeria with over a decade of experience in graphic design,
+								UI/UX design, and frontend development. I have worked with top
+								brands in Nigeria, such as Jumia, and clients from around the
+								world. Despite facing financial challenges as a teenager, I have
+								built a successful career and I'm committed to delivering
+								high-quality work while staying up-to-date with the latest
+								trends in the industry.
 							</p>
 
 							<div className="flex justify-center items-center lg:justify-start">
@@ -399,7 +404,14 @@ export default function Home({ portfolios }) {
 							</h2>
 							<div className="line w-[100px] h-[1px] mx-[auto] lg:mx-[unset] bg-green-color-alt dark:bg-green-color mt-4 mb-10"></div>
 							<p className="dark:text-white text-[#121212] text-center lg:text-left font-normal leading-[1.8] mb-14">
-								Hi, I'm Gabriel Samuel Aina, a creative professional from Nigeria with over a decade of experience in graphic design, UI/UX design, and frontend development. I have worked with top brands in Nigeria, such as Jumia, and clients from around the world. Despite facing financial challenges as a teenager, I have built a successful career and I'm committed to delivering high-quality work while staying up-to-date with the latest trends in the industry.
+								Hi, I'm Gabriel Samuel Aina, a creative professional from
+								Nigeria with over a decade of experience in graphic design,
+								UI/UX design, and frontend development. I have worked with top
+								brands in Nigeria, such as Jumia, and clients from around the
+								world. Despite facing financial challenges as a teenager, I have
+								built a successful career and I'm committed to delivering
+								high-quality work while staying up-to-date with the latest
+								trends in the industry.
 							</p>
 
 							<div className="flex justify-center items-center lg:justify-start">
@@ -438,44 +450,54 @@ export default function Home({ portfolios }) {
 							></motion.div>
 						</motion.div>
 
-						{mappedPortfolio.length ? mappedPortfolio.map((p, index) => (
-									<motion.article key={index} variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.1 }}>
-										<motion.div
-											whileHover={{ borderRadius: 300 }}
-											className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] bg-contain overflow-hidden cursor-pointer"
-											onClick={() => router.push(`/case-study/${p.slug.current}`)}
-										>
-											<motion.img
-												src={p.image}
-												alt={p.name}
-												className="h-[100%] w-[100%] bg-contain aspect-auto"
-												whileHover={{ scale: 1.1 }}
-												transition={{
-													type: "spring",
-													stiffness: 400,
-													damping: 10,
-												}}
-											/>
-										</motion.div>
-										<div className="work__content flex flex-wrap lg:flex-no-wrap gap-4 items-start justify-start mt-8 lg:mt-14">
-												<div className="work__detail flex justify-start items-center gap-4 min-w-[270px] lg:min-w-[200px]">
-													<span className="dark:text-white text-[#121212] text-sm font-medium">
-														{p.type}
-													</span>
-													<div className="line w-[40px] h-[1px] bg-[#4F4F54]"></div>
-												</div>
-												<div className="work__name">
-													<h3 className="dark:text-white text-[#121212] text-3xl md:text-4xl lg:text-6xl lg:mt-[-6px] font-semibold">
-														{p.name}
-													</h3>
-													<p className="desc mt-1 text-[#7E7E86] text-sm leading-[1.6] lg:max-w-[500px] lg:ml-[5px] lg:mt-6">
-														{p.description}
-													</p>
-												</div>
-											</div>
-											<div className="line w-[100%] h-[1px] bg-[#4F4F54] mt-24 mb-10 mx-[auto]"></div>
-									</motion.article>
-								)) : <>No Works Yet</>}
+						{mappedPortfolio.length ? (
+							mappedPortfolio.map((p, index) => (
+								<motion.article
+									key={index}
+									variants={cardVariants}
+									initial="offscreen"
+									whileInView="onscreen"
+									viewport={{ once: true, amount: 0.1 }}
+								>
+									<motion.div
+										whileHover={{ borderRadius: 300 }}
+										className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] bg-contain overflow-hidden cursor-pointer"
+										onClick={() => router.push(`/case-study/${p.slug.current}`)}
+									>
+										<motion.img
+											src={p.image}
+											alt={p.name}
+											className="h-[100%] w-[100%] object-cover bg-contain aspect-auto"
+											whileHover={{ scale: 1.1 }}
+											transition={{
+												type: "spring",
+												stiffness: 400,
+												damping: 10,
+											}}
+										/>
+									</motion.div>
+									<div className="work__content flex flex-wrap lg:flex-no-wrap gap-4 items-start justify-start mt-8 lg:mt-14">
+										<div className="work__detail flex justify-start items-center gap-4 min-w-[270px] lg:min-w-[200px]">
+											<span className="dark:text-white text-[#121212] text-sm font-medium">
+												{p.type}
+											</span>
+											<div className="line w-[40px] h-[1px] bg-[#4F4F54]"></div>
+										</div>
+										<div className="work__name">
+											<h3 className="dark:text-white text-[#121212] text-3xl md:text-4xl lg:text-6xl lg:mt-[-6px] font-semibold">
+												{p.name}
+											</h3>
+											<p className="desc mt-1 text-[#7E7E86] text-sm leading-[1.6] lg:max-w-[500px] lg:ml-[5px] lg:mt-6">
+												{p.description}
+											</p>
+										</div>
+									</div>
+									<div className="line w-[100%] h-[1px] bg-[#4F4F54] mt-24 mb-10 mx-[auto]"></div>
+								</motion.article>
+							))
+						) : (
+							<>No Works Yet</>
+						)}
 
 						<div
 							whileHover={{ scale: 1.2 }}
@@ -505,23 +527,24 @@ export default function Home({ portfolios }) {
 	);
 }
 
-export const getServerSideProps = async pageContext => {
-	const query = encodeURIComponent('*[ _type == "portfolio" ] | order(_createdAt desc) [0...3]');
+export const getServerSideProps = async (pageContext) => {
+	const query = encodeURIComponent(
+		'*[ _type == "portfolio" ] | order(_createdAt desc) [0...3]'
+	);
 	const url = `https://r5dols4o.api.sanity.io/v1/data/query/production?query=${query}`;
-	const result = await fetch(url).then(res => res.json());
- 
+	const result = await fetch(url).then((res) => res.json());
+
 	if (!result.result || !result.result.length) {
-	  return {
-		 props: {
-			portfolios: [],
-		 }
-	  }
+		return {
+			props: {
+				portfolios: [],
+			},
+		};
 	} else {
-	  return {
-		 props: {
-			portfolios: result.result,
-		 }
-	  }
+		return {
+			props: {
+				portfolios: result.result,
+			},
+		};
 	}
- };
- 
+};

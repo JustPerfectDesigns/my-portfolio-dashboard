@@ -13,9 +13,9 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: "name",
+        source: 'name',
         maxLength: 90,
-      }
+      },
     },
     {
       name: 'type',
@@ -38,42 +38,43 @@ export default {
       type: 'object',
       fields: [
         {
-          name: "role",
-          title: "Role Played",
-          type: "string"
+          name: 'role',
+          title: 'Role Played',
+          type: 'string',
         },
         {
-          name: "year",
-          title: "Year Created",
-          type: "string"
+          name: 'year',
+          title: 'Year Created',
+          type: 'string',
         },
         {
-          name: "niche",
-          title: "Company Niche",
-          type: "string"
+          name: 'niche',
+          title: 'Company Niche',
+          type: 'string',
         },
         {
-          name: "link",
-          title: "Project Link",
-          type: "url",
-          validation: Rule => Rule.uri({
-            scheme: ['http', 'https', 'mailto', 'tel']
-          })
+          name: 'link',
+          title: 'Project Link',
+          type: 'url',
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ['http', 'https', 'mailto', 'tel'],
+            }),
         },
         {
-          name: "overviewSubTitle",
-          title: "Overview Sub Title",
-          type: "string"
+          name: 'overviewSubTitle',
+          title: 'Overview Sub Title',
+          type: 'string',
         },
         {
-          name: "overviewTitle",
-          title: "Overview Title",
-          type: "string"
+          name: 'overviewTitle',
+          title: 'Overview Title',
+          type: 'string',
         },
         {
-          name: "overviewDesc",
-          title: "Overview Description",
-          type: "string"
+          name: 'overviewDesc',
+          title: 'Overview Description',
+          type: 'string',
         },
         {
           name: 'overviewImg01',
@@ -91,26 +92,26 @@ export default {
           type: 'image',
         },
         {
-          name: "challengeSubTitle",
-          title: "Challenge Sub Title",
-          type: "string"
+          name: 'challengeSubTitle',
+          title: 'Challenge Sub Title',
+          type: 'string',
         },
         {
-          name: "challengeTitle",
-          title: "Challenge Title",
-          type: "string"
+          name: 'challengeTitle',
+          title: 'Challenge Title',
+          type: 'string',
         },
         {
-          name: "challengeDesc",
-          title: "Challenge Description",
-          type: "string"
+          name: 'challengeDesc',
+          title: 'Challenge Description',
+          type: 'string',
         },
         {
           name: 'challengeVideo',
           title: 'Challenge Video',
           type: 'file',
           options: {
-            accept: 'video/*'
+            accept: 'video/*',
           },
         },
         {
@@ -119,19 +120,19 @@ export default {
           type: 'image',
         },
         {
-          name: "solutionSubTitle",
-          title: "Solution Sub Title",
-          type: "string"
+          name: 'solutionSubTitle',
+          title: 'Solution Sub Title',
+          type: 'string',
         },
         {
-          name: "solutionTitle",
-          title: "Solution Title",
-          type: "string"
+          name: 'solutionTitle',
+          title: 'Solution Title',
+          type: 'string',
         },
         {
-          name: "solutionDesc",
-          title: "Solution Description",
-          type: "string"
+          name: 'solutionDesc',
+          title: 'Solution Description',
+          type: 'string',
         },
         {
           name: 'solutionImg01',
@@ -154,36 +155,21 @@ export default {
           type: 'image',
         },
         {
-          name: "littleDescSubTitle",
-          title: "Case Little Description Sub Title",
-          type: "string"
+          name: 'impactSubTitle',
+          title: 'Impact Sub Title',
+          type: 'string',
         },
         {
-          name: "littleDescTitle",
-          title: "Case Little Description Title",
-          type: "string"
+          name: 'impactTitle',
+          title: 'Impact Title',
+          type: 'string',
         },
         {
-          name: 'littleDescImg',
-          title: 'Case Little Description Image',
-          type: 'image',
+          name: 'impactDesc',
+          title: 'Impact Description',
+          type: 'string',
         },
-        {
-          name: "impactSubTitle",
-          title: "Impact Sub Title",
-          type: "string"
-        },
-        {
-          name: "impactTitle",
-          title: "Impact Title",
-          type: "string"
-        },
-        {
-          name: "impactDesc",
-          title: "Impact Description",
-          type: "string"
-        },
-      ]
+      ],
     },
   ],
 }
