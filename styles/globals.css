@@ -3,33 +3,32 @@
 @tailwind utilities;
 
 * {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 body {
 	/* @apply bg-black-bg; */
 	font-size: 0.938rem;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 button {
 	outline: none;
-	border: none
+	border: none;
 }
 
-.main__main::before{
+/* .main__main::before {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
 	content: "";
-	/* you can control opacity of noise  */
-	opacity: .025;  
+	opacity: 0.025;
 	z-index: 1000;
 	pointer-events: none;
-	background: url(../public/images/noise.gif) ;
-}
+	background: url(../public/images/noise.gif);
+} */
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
@@ -38,7 +37,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #45C87F;
+	background-color: #45c87f;
 	border-radius: 0.5rem;
 }
 
@@ -67,36 +66,52 @@ button {
 	height: 100px;
 	width: 100px;
 	margin: 0 auto;
-	-webkit-animation: rotation .5s infinite linear;
-	-moz-animation: rotation .5s infinite linear;
-	-o-animation: rotation .5s infinite linear;
-	animation: rotation .5s infinite linear;
+	-webkit-animation: rotation 0.5s infinite linear;
+	-moz-animation: rotation 0.5s infinite linear;
+	-o-animation: rotation 0.5s infinite linear;
+	animation: rotation 0.5s infinite linear;
 	border: 6px solid red;
 }
 
 @-webkit-keyframes rotation {
-	from {-webkit-transform: rotate(0deg);}
-	to {-webkit-transform: rotate(359deg);}
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
 }
 @-moz-keyframes rotation {
-	from {-moz-transform: rotate(0deg);}
-	to {-moz-transform: rotate(359deg);}
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(359deg);
+	}
 }
 @-o-keyframes rotation {
-	from {-o-transform: rotate(0deg);}
-	to {-o-transform: rotate(359deg);}
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(359deg);
+	}
 }
 @keyframes rotation {
-	from {transform: rotate(0deg);}
-	to {transform: rotate(359deg);}
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
 }
 
 ::selection {
-	background-color: #45C87F;
+	background-color: #45c87f;
 	color: white;
 }
 
 ::-moz-selection {
-	background-color: #45C87F;
+	background-color: #45c87f;
 	color: white;
 }

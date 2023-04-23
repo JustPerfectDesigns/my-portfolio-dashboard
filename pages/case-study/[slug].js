@@ -348,16 +348,6 @@ export default function CaseStudy({
 				</motion.div>
 			</motion.div>
 
-			{/* Render a link to the next portfolio item */}
-			{/* <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="mt-40 w-[100%] h-[350px] lg:h-[650px] bg-black-container flex justify-center items-center flex-col gap-6">
-        <motion.span variants={textVariant(.1)} className="flex text-center text-[#A9A9A9] font-semibold">Next Project</motion.span>
-        <motion.div variants={textVariant(.1)}>
-          <Link href={`/case-study/${nextPortfolio._id}`} passHref className="text-4xl lg:text-7xl font-semibold flex justify-center items-center text-center">
-            {nextPortfolio.name}
-          </Link>
-        </motion.div>
-      </motion.div> */}
-
 			<Footer />
 		</motion.div>
 	);
