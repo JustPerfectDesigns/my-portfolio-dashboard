@@ -139,9 +139,17 @@ export const Post = ({ title, body, image }) => {
 						<h1 className="my-11 text-3xl font-semibold lg:text-4xl">
 							{title}
 						</h1>
-						<div className="breadcrumb text-xs opacity-50">
-							<Link href="/post">Blog</Link>
-							<span> / {title}</span>
+						<div className="breadcrumb text-sm">
+							<Link
+								href="/post"
+								className="font-semibold text-green-color underline"
+							>
+								Blog
+							</Link>
+							<span className="opacity-50">
+								{" "}
+								{"</>"} {title}
+							</span>
 						</div>
 						{imageUrl && <img className="mt-12 mb-9 w-full" src={imageUrl} />}
 
