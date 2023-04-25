@@ -56,18 +56,18 @@ const index = ({ portfolios }) => {
 					initial="hidden"
 					whileInView="show"
 					viewport={{ once: true, amount: 0.25 }}
-					className="w-full py-[7rem] dark:bg-black-container bg-[#F6F8FA] px-6 lg:px-[6rem] relative"
+					className="relative w-full bg-[#F6F8FA] py-[7rem] px-6 dark:bg-black-container lg:px-[6rem]"
 				>
 					<motion.h2
 						variants={textVariant(0.5)}
-						className="text-[2.2rem] md:text-3xl lg:text-6xl leading-10 lg:leading-[1.3] dark:text-white text-[#121212] font-semibold text-center"
+						className="text-center text-[2.2rem] font-semibold leading-10 text-[#121212] dark:text-white md:text-3xl lg:text-6xl lg:leading-[1.3]"
 					>
 						All My Projects
 					</motion.h2>
 
 					<motion.p
 						variants={textVariant(0.6)}
-						className="mt-8 mb-8 text-[1.1rem] lg:text-[1.5rem] dark:text-white text-[#121212] font-light text-center leading-[1.6]"
+						className="mt-8 mb-8 text-center text-[1.1rem] font-light leading-[1.6] text-[#121212] dark:text-white lg:text-[1.5rem]"
 					>
 						Both Fictional and Real Life
 					</motion.p>
@@ -84,13 +84,13 @@ const index = ({ portfolios }) => {
 					>
 						<motion.h2
 							variants={leftVariant(0.6)}
-							className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
+							className="text-center text-2xl font-semibold text-[#121212] dark:text-white"
 						>
 							Projects
 						</motion.h2>
 						<motion.div
 							variants={rightVariant(0.6)}
-							className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mx-[auto]"
+							className="line mx-[auto] mt-4 h-[1px] w-[60px] bg-green-color-alt dark:bg-green-color"
 						></motion.div>
 					</motion.div>
 					<motion.div className="portfolio__container mt-20">
@@ -105,13 +105,13 @@ const index = ({ portfolios }) => {
 								>
 									<motion.div
 										whileHover={{ borderRadius: 300 }}
-										className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] overflow-hidden cursor-pointer"
+										className="img h-[200px] cursor-pointer overflow-hidden md:h-[310px] lg:h-[450px] xl:h-[590px]"
 										onClick={() => router.push(`/case-study/${p.slug.current}`)}
 									>
 										<motion.img
 											src={p.image}
 											alt={p.name}
-											className="h-[100%] w-[100%] object-cover bg-contain aspect-auto"
+											className="aspect-auto h-[100%] w-[100%] bg-contain object-cover"
 											whileHover={{ scale: 1.1 }}
 											transition={{
 												type: "spring",
@@ -120,23 +120,23 @@ const index = ({ portfolios }) => {
 											}}
 										/>
 									</motion.div>
-									<div className="work__content flex flex-wrap lg:flex-no-wrap gap-4 items-start justify-start mt-8 lg:mt-14">
-										<div className="work__detail flex justify-start items-center gap-4 min-w-[270px] lg:min-w-[200px]">
-											<span className="dark:text-white text-[#121212] text-sm">
+									<div className="work__content lg:flex-no-wrap mt-8 flex flex-wrap items-start justify-start gap-4 lg:mt-14">
+										<div className="work__detail flex min-w-[270px] items-center justify-start gap-4 lg:min-w-[200px]">
+											<span className="text-sm text-[#121212] dark:text-white">
 												{p.type}
 											</span>
-											<div className="line w-[40px] h-[1px] bg-[#4F4F54]"></div>
+											<div className="line h-[1px] w-[40px] bg-[#4F4F54]"></div>
 										</div>
 										<div className="work__name">
-											<h3 className="dark:text-white text-[#121212] text-3xl md:text-4xl lg:text-6xl lg:mt-[-6px] font-semibold">
+											<h3 className="text-3xl font-semibold text-[#121212] dark:text-white md:text-4xl lg:mt-[-6px] lg:text-6xl">
 												{p.name}
 											</h3>
-											<p className="desc mt-1 text-[#7E7E86] text-sm leading-[1.6] lg:max-w-[500px] lg:ml-[5px] lg:mt-6">
+											<p className="desc mt-1 text-sm leading-[1.6] text-[#7E7E86] lg:ml-[5px] lg:mt-6 lg:max-w-[500px]">
 												{p.description}
 											</p>
 										</div>
 									</div>
-									<div className="line w-[100%] h-[1px] bg-[#4F4F54] mt-24 mb-10 mx-[auto]"></div>
+									<div className="line mx-[auto] mt-24 mb-10 h-[1px] w-[100%] bg-[#4F4F54]"></div>
 								</motion.article>
 							))
 						) : (

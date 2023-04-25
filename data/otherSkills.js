@@ -6,11 +6,10 @@ import {
 	Photoshop,
 	PremierePro,
 	Canva,
-	Filmora
+	Filmora,
 } from "../components/svgs/others";
 
 const otherSkills = [
-   
 	{
 		id: 1,
 		icon: <Photoshop />,
@@ -56,7 +55,7 @@ const otherSkills = [
 	{
 		id: 8,
 		icon: <Filmora />,
-		title: "I Movie",
+		title: "Filmora",
 		desc: "Video Editing",
 	},
 ];

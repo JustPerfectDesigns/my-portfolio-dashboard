@@ -106,14 +106,14 @@ export default {
           title: 'Challenge Description',
           type: 'string',
         },
-        {
-          name: 'challengeVideo',
-          title: 'Challenge Video',
-          type: 'file',
-          options: {
-            accept: 'video/*',
-          },
-        },
+        // {
+        //   name: 'challengeVideo',
+        //   title: 'Challenge Video',
+        //   type: 'file',
+        //   options: {
+        //     accept: 'video/*',
+        //   },
+        // },
         {
           name: 'challengeImg01',
           title: 'Challenge Image 01',
@@ -142,16 +142,6 @@ export default {
         {
           name: 'solutionImg02',
           title: 'Solution Image 02',
-          type: 'image',
-        },
-        {
-          name: 'solutionImg03',
-          title: 'Solution Image 03',
-          type: 'image',
-        },
-        {
-          name: 'solutionImg04',
-          title: 'Solution Image 04',
           type: 'image',
         },
         {

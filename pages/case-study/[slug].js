@@ -34,8 +34,7 @@ export default function CaseStudy({
 	solutionTitle,
 	solutionDesc,
 	solutionImg01,
-	littleDescSubTitle,
-	littleDescTitle,
+	solutionImg02,
 	impactSubTitle,
 	impactTitle,
 	impactDesc,
@@ -94,13 +93,13 @@ export default function CaseStudy({
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.1 }}
-				className="w-[100%] h-[50vh] lg:h-[60vh] overflow-hidden mb-20"
+				className="mb-20 h-[50vh] w-[100%] overflow-hidden lg:h-[60vh]"
 			>
 				{imageUrl && (
 					<img
 						src={imageUrl}
 						alt={name}
-						className="aspect-auto h-[100%] w-[auto] lg:w-[100%] object-cover"
+						className="aspect-auto h-[100%] w-[auto] object-cover lg:w-[100%]"
 						variants={textVariant(0.3)}
 					/>
 				)}
@@ -115,10 +114,10 @@ export default function CaseStudy({
 			>
 				<motion.div
 					variants={textVariant(0.6)}
-					className="max-[1015px]:hidden flex justify-start items-center lg:col-span-1"
+					className="flex items-center justify-start max-[1015px]:hidden lg:col-span-1"
 				>
 					<a href={link} target="_blank">
-						<RiExternalLinkLine className="bg-green-color p-5 lg:text-7xl text-[#121212] rounded-full" />
+						<RiExternalLinkLine className="rounded-full bg-green-color p-5 text-[#121212] lg:text-7xl" />
 					</a>
 				</motion.div>
 
@@ -131,7 +130,7 @@ export default function CaseStudy({
 				>
 					<motion.h1
 						variants={fadeDownVariant(0.6)}
-						className="case-title text-6xl md:text-7xl lg:text-8xl font-semibold mb-14"
+						className="case-title mb-14 text-6xl font-semibold md:text-7xl lg:text-8xl"
 					>
 						{name}
 					</motion.h1>
@@ -142,28 +141,28 @@ export default function CaseStudy({
 						initial="hidden"
 						whileInView="show"
 						viewport={{ once: true, amount: 0.1 }}
-						className="case-details flex justify-between flex-wrap gap-8 w-[90%] md:w-[80%] lg:w-[80%] md:gap-12"
+						className="case-details flex w-[90%] flex-wrap justify-between gap-8 md:w-[80%] md:gap-12 lg:w-[80%]"
 					>
 						<motion.div
 							variants={textVariant(0.6)}
 							className="w-[70%] lg:w-[280px]"
 						>
-							<span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">
+							<span className="mb-3 block text-[14px] font-semibold text-[#A9A9A9] md:text-[16px]">
 								Role
 							</span>
-							<p className="uppercase text-[15px] md:text-[18px]">{role}</p>
+							<p className="text-[15px] uppercase md:text-[18px]">{role}</p>
 						</motion.div>
 						<motion.div variants={textVariant(0.6)} className="">
-							<span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">
+							<span className="mb-3 block text-[14px] font-semibold text-[#A9A9A9] md:text-[16px]">
 								Year
 							</span>
-							<p className="uppercase text-[15px] md:text-[18px]">{year}</p>
+							<p className="text-[15px] uppercase md:text-[18px]">{year}</p>
 						</motion.div>
 						<motion.div variants={textVariant(0.6)}>
-							<span className="text-[14px] md:text-[16px] text-[#A9A9A9] font-semibold mb-3 block">
+							<span className="mb-3 block text-[14px] font-semibold text-[#A9A9A9] md:text-[16px]">
 								Niche
 							</span>
-							<p className="uppercase text-[15px] md:text-[18px]">{niche}</p>
+							<p className="text-[15px] uppercase md:text-[18px]">{niche}</p>
 						</motion.div>
 					</motion.div>
 				</motion.div>
@@ -182,11 +181,11 @@ export default function CaseStudy({
 					variants={textVariant(0.1)}
 					className="lg:grid lg:grid-cols-4"
 				>
-					<span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 lg:mb-0 block font-semibold lg:col-span-1">
+					<span className="mb-6 block text-[14px] font-semibold uppercase text-[#A9A9A9] md:text-[16px] lg:col-span-1 lg:mb-0">
 						{overviewSubTitle}
 					</span>
 					<div className="lg:col-span-3">
-						<h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug mb-8 lg:-mt-4 font-semibold">
+						<h2 className="mb-8 text-3xl font-semibold md:text-4xl lg:-mt-4 lg:text-5xl lg:leading-snug">
 							{overviewTitle}
 						</h2>
 						<p className="text-[#A9A9A9] md:text-[18px]">{overviewDesc}</p>
@@ -197,26 +196,26 @@ export default function CaseStudy({
 					variants={textVariant(0.1)}
 					className="case-overview-images mt-36 lg:mt-56"
 				>
-					<div className="w-[100%] h-[192.600] md:h-[350px] lg:h-[650px] overflow-hidden mb-7 md:mb-0 lg:mb-12">
+					<div className="mb-7 h-[192.600] w-[100%] overflow-hidden md:mb-0 md:h-[350px] lg:mb-12 lg:h-[650px]">
 						<img
 							src={urlFor(overviewImg01)}
 							alt={name}
-							className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
+							className="aspect-auto object-cover md:h-[100%] md:w-[100%]"
 						/>
 					</div>
 					<div className="md:flex md:gap-x-7 lg:gap-x-12">
-						<div className="w-[100%] h-[350px] lg:h-[650px] overflow-hidden mb-7 md:-mb-0">
+						<div className="mb-7 h-[350px] w-[100%] overflow-hidden md:-mb-0 lg:h-[650px]">
 							<img
 								src={urlFor(overviewImg02)}
 								alt={name}
-								className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
+								className="aspect-auto object-cover md:h-[100%] md:w-[100%]"
 							/>
 						</div>
-						<div className="w-[100%] h-[350px] lg:h-[650px] overflow-hidden">
+						<div className="h-[350px] w-[100%] overflow-hidden lg:h-[650px]">
 							<img
 								src={urlFor(overviewImg03)}
 								alt={name}
-								className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
+								className="aspect-auto object-cover md:h-[100%] md:w-[100%]"
 							/>
 						</div>
 					</div>
@@ -234,11 +233,11 @@ export default function CaseStudy({
 					variants={textVariant(0.1)}
 					className="lg:grid lg:grid-cols-4"
 				>
-					<span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">
+					<span className="mb-6 block text-[14px] font-semibold uppercase text-[#A9A9A9] md:text-[16px] lg:col-span-1">
 						{challengeSubTitle}
 					</span>
 					<div className="lg:col-span-3">
-						<h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug mb-8 lg:-mt-4 font-semibold">
+						<h2 className="mb-8 text-3xl font-semibold md:text-4xl lg:-mt-4 lg:text-5xl lg:leading-snug">
 							{challengeTitle}
 						</h2>
 						<p className="text-[#A9A9A9] md:text-[18px]">{challengeDesc}</p>
@@ -251,7 +250,7 @@ export default function CaseStudy({
 					className="case-challenge-images mt-36 lg:mt-56"
 				>
 					{/* <div className="w-[100%] h-[350px] lg:h-[650px] bg-slate-100 mb-7 lg:mb-12"></div> */}
-					<div className="w-[100%] h-[644.45px] lg:h-[2300px] bg-slate-100">
+					<div className="h-[644.45px] w-[100%] bg-slate-100 lg:h-[2300px]">
 						<img
 							src={urlFor(challengeImg01)}
 							alt={name}
@@ -272,11 +271,11 @@ export default function CaseStudy({
 					variants={textVariant(0.1)}
 					className="lg:grid lg:grid-cols-4"
 				>
-					<span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">
+					<span className="mb-6 block text-[14px] font-semibold uppercase text-[#A9A9A9] md:text-[16px] lg:col-span-1">
 						{solutionSubTitle}
 					</span>
 					<div className="lg:col-span-3">
-						<h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug mb-8 lg:-mt-4 font-semibold">
+						<h2 className="mb-8 text-3xl font-semibold md:text-4xl lg:-mt-4 lg:text-5xl lg:leading-snug">
 							{solutionTitle}
 						</h2>
 						<p className="text-[#A9A9A9] md:text-[18px]">{solutionDesc}</p>
@@ -287,14 +286,20 @@ export default function CaseStudy({
 					variants={textVariant(0.1)}
 					className="case-solution-images mt-36 lg:mt-56"
 				>
-					<div className="w-[100%] h-[228.2px] lg:h-[700px] bg-slate-100 mb-7 lg:mb-12">
+					<div className="mb-7 h-[228.2px] w-[100%] bg-slate-100 lg:mb-12 lg:h-[700px]">
 						<img
 							src={urlFor(solutionImg01)}
 							alt={name}
-							className="aspect-auto md:h-[100%] md:w-[100%] object-cover"
+							className="aspect-auto object-cover md:h-[100%] md:w-[100%]"
 						/>
 					</div>
-					<div className="w-[100%] h-[350px] lg:h-[650px] bg-slate-100 mt-7 lg:mt-12"></div>
+					<div className="mt-7 h-[246.1px] w-[100%] bg-slate-100 lg:mt-12 lg:h-[750px]">
+						<img
+							src={urlFor(solutionImg02)}
+							alt={name}
+							className="aspect-auto object-cover md:h-[100%] md:w-[100%]"
+						/>
+					</div>
 				</motion.div>
 			</motion.div>
 
@@ -336,11 +341,11 @@ export default function CaseStudy({
 					variants={textVariant(0.1)}
 					className="lg:grid lg:grid-cols-4"
 				>
-					<span className="text-[#A9A9A9] uppercase text-[14px] md:text-[16px] mb-6 block font-semibold lg:col-span-1">
+					<span className="mb-6 block text-[14px] font-semibold uppercase text-[#A9A9A9] md:text-[16px] lg:col-span-1">
 						{impactSubTitle}
 					</span>
 					<div className="lg:col-span-3">
-						<h2 className="text-3xl md:text-4xl lg:text-5xl lg:leading-snug font-semibold mb-8 lg:-mt-4">
+						<h2 className="mb-8 text-3xl font-semibold md:text-4xl lg:-mt-4 lg:text-5xl lg:leading-snug">
 							{impactTitle}
 						</h2>
 						<p className="text-[#A9A9A9] md:text-[18px]">{impactDesc}</p>
@@ -398,8 +403,7 @@ export const getServerSideProps = async (pageContext) => {
 				solutionTitle: portfolio.content.solutionTitle,
 				solutionDesc: portfolio.content.solutionDesc,
 				solutionImg01: portfolio.content.solutionImg01,
-				littleDescSubTitle: portfolio.content.littleDescSubTitle,
-				littleDescTitle: portfolio.content.littleDescTitle,
+				solutionImg02: portfolio.content.solutionImg02,
 				impactSubTitle: portfolio.content.impactSubTitle,
 				impactTitle: portfolio.content.impactTitle,
 				impactDesc: portfolio.content.impactDesc,

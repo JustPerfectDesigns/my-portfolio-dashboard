@@ -115,28 +115,28 @@ export const Post = ({ title, body, image }) => {
 				<section className="w-full lg:col-span-2">
 					<div className="hero flex items-center gap-7">
 						{/* <span>Put the header with advertising yourself here</span> */}
-						<div className="min-w-[80px] min-h-[80px] md:min-h-[75px] md:w-[75px] bg-red-400 rounded-full overflow-hidden">
+						<div className="min-h-[80px] min-w-[80px] overflow-hidden rounded-full bg-red-400 md:min-h-[75px] md:w-[75px]">
 							<Image src={Gab} alt="Gabriel Samuel Aina" className="w-[100%]" />
 						</div>
-						<div className='w-[100%] lg:py-[20px] lg:px-[43px] py-[15px] px-[15px] md:py-[15px] md:px-[25px] text-[#44464c] dark:text-white bg-[#f4f6f8] dark:bg-black-container border-2 border-[#f2f2f2] dark:border-[#252528] relative before:absolute before:content-[""] before:block before:w-[22px] before:h-[22px] before:top-[50%] before:left-0 before:mt-[-11px] before:ml-[-11px] before:bg-inherit before:rotate-45 before:border-b-2 before:border-l-2 before:border-[#f2f2f2] dark:before:border-[#252528]'>
-							<span className="block mb-[5px] text-[16px] md:text-[18px] md:leading-[1.6] font-semibold">
-								I hope you enjoy reading this blog post.
+						<div className='relative w-[100%] border-2 border-[#f2f2f2] bg-[#f4f6f8] py-[15px] px-[15px] text-[#44464c] before:absolute before:top-[50%] before:left-0 before:mt-[-11px] before:ml-[-11px] before:block before:h-[22px] before:w-[22px] before:rotate-45 before:border-b-2 before:border-l-2 before:border-[#f2f2f2] before:bg-inherit before:content-[""] dark:border-[#252528] dark:bg-black-container dark:text-white dark:before:border-[#252528] md:py-[15px] md:px-[25px] lg:py-[20px] lg:px-[43px]'>
+							<span className="mb-[5px] block text-[16px] font-semibold md:text-[18px] md:leading-[1.6]">
+								Hey! 👋 I hope you enjoy reading this blog post.
 							</span>
-							<span className="block mb-[5px] text-sm md:text-normal">
-								If you want my team to just do your marketing for you,{" "}
+							<span className="md:text-normal mb-[5px] block text-sm">
+								If you need me to help with your website, web app or branding,{" "}
 								<a
 									href="https://neilpatel.com/consulting/"
-									className="text-[#45C87F] font-medium"
+									className="font-medium text-[#45C87F]"
 								>
 									click here
 								</a>{" "}
 							</span>
 						</div>
 					</div>
-					<div className="line bg-green-color w-16 h-[2px] mt-14"></div>
+					<div className="line mt-14 h-[2px] w-16 bg-green-color"></div>
 
 					<div className="post">
-						<h1 className="text-3xl lg:text-4xl font-semibold my-11">
+						<h1 className="my-11 text-3xl font-semibold lg:text-4xl">
 							{title}
 						</h1>
 						<div className="breadcrumb text-xs opacity-50">
@@ -149,7 +149,7 @@ export const Post = ({ title, body, image }) => {
 							<noSSR>
 								<BlockContent
 									blocks={body}
-									className="blockc leading-loose dark:text-[#E7E7E7] text-[#121212]"
+									className="blockc leading-loose text-[#121212] dark:text-[#E7E7E7]"
 									serializers={serializers}
 									imageOptions={{ w: 1000, h: 760, fit: "max" }}
 									projectId={"r5dols4o"}
@@ -213,6 +213,30 @@ export const Post = ({ title, body, image }) => {
                     margin-top: -4px;
                   }
 
+                  .blockc ol {
+                    margin: 2rem 0 2rem 1.4rem;
+                  }
+
+                  .blockc ol li {
+                    list-style: number;
+                    position: relative;
+                    padding: 0 0 0 1.5rem;
+                    margin: 1rem 0;
+                  }
+
+                  // .blockc ol li::before {
+                  //   content: "";
+                  //   display: block;
+                  //   width: 8px;
+                  //   height: 8px;
+                  //   border-radius: 50%;
+                  //   background: #45C87F;
+                  //   position: absolute;
+                  //   top: .9rem;
+                  //   left: 0;
+                  //   margin-top: -4px;
+                  // }
+
                   @media screen and (min-width: 1024px) {
                     .blockc img {
                       margin: 2.5rem 0;
@@ -230,7 +254,7 @@ export const Post = ({ title, body, image }) => {
 					</div>
 				</section>
 				<aside className="h-[10rem] w-full lg:sticky lg:top-[2rem]">
-					<div className="text-[#44464c] dark:text-white bg-[#f4f6f8] dark:bg-black-container p-6 border-2 border-[#f2f2f2] dark:border-[#252528] w-full h-[200px]">
+					<div className="h-[200px] w-full border-2 border-[#f2f2f2] bg-[#f4f6f8] p-6 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
 						This section is still not done. Remember!
 					</div>
 				</aside>
