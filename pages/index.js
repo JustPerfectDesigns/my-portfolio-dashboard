@@ -83,21 +83,21 @@ export default function Home({ portfolios }) {
 						initial="hidden"
 						whileInView="show"
 						viewport={{ once: true, amount: 0.25 }}
-						className="w-full py-[5rem] md:py-[7rem] dark:bg-black-container bg-[#F0F2F4] px-6 lg:px-[6rem]"
+						className="w-full bg-[#F0F2F4] py-[5rem] px-6 dark:bg-black-container md:py-[7rem] lg:px-[6rem]"
 					>
 						<motion.h3
 							variants={textVariant(0.3)}
-							className="text-lg lg:text-2xl text-green-color-alt dark:text-green-color uppercase font-semibold text-center mb-8"
+							className="mb-8 text-center text-lg font-semibold uppercase text-green-color-alt dark:text-green-color lg:text-2xl"
 						>
 							Gabriel Samuel A.
 						</motion.h3>
 						<motion.div
 							variants={textVariant(0.4)}
-							className="w-[80px] h-[1px] bg-green-color-alt dark:bg-green-color mx-[auto]"
+							className="mx-[auto] h-[1px] w-[80px] bg-green-color-alt dark:bg-green-color"
 						></motion.div>
 						<motion.h2
 							variants={textVariant(0.5)}
-							className="text-[2.2rem] md:text-3xl lg:text-6xl leading-10 lg:leading-[1.3] dark:text-white text-[#121212] font-semibold text-center mt-8"
+							className="mt-8 text-center text-[2.2rem] font-semibold leading-10 text-[#121212] dark:text-white md:text-3xl lg:text-6xl lg:leading-[1.3]"
 						>
 							I’m a Front-End Developer with <br />
 							experience in UI & Graphics
@@ -105,7 +105,7 @@ export default function Home({ portfolios }) {
 
 						<motion.p
 							variants={textVariant(0.6)}
-							className="mt-8 text-[1.1rem] lg:text-[1.5rem] dark:text-white text-[#121212] font-light text-center leading-[1.6]"
+							className="mt-8 text-center text-[1.1rem] font-light leading-[1.6] text-[#121212] dark:text-white lg:text-[1.5rem]"
 						>
 							Hello, I'm Gabriel Samuel Aina, My passion is to help businesses
 							succeed worldwide through my skills, knowledge, and dedication to
@@ -113,7 +113,7 @@ export default function Home({ portfolios }) {
 						</motion.p>
 						<motion.div
 							variants={textVariant(0.7)}
-							className="mt-24 flex flex-wrap gap-y-12 gap-x-4 justify-center"
+							className="mt-24 flex flex-wrap justify-center gap-y-12 gap-x-4"
 						>
 							<motion.div
 								whileHover={{ scale: 1.2 }}
@@ -122,7 +122,7 @@ export default function Home({ portfolios }) {
 							>
 								<Link
 									href="/case-study"
-									className="py-5 px-8 bg-black-button text-white font-semibold"
+									className="bg-black-button py-5 px-8 font-semibold text-white"
 								>
 									See My Work
 								</Link>
@@ -135,8 +135,10 @@ export default function Home({ portfolios }) {
 							>
 								<Link
 									href="../resume/GABRIEL-SAMUEL-AINA-CV-RESUME.zip"
-									className="py-5 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
-									download={"GABRIEL SAMUEL AINA - Dark and Light CV/Resume"}
+									className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
+									download={
+										"GABRIEL SAMUEL AINA CV/Resume - Dark and Light Version"
+									}
 									target="_blank"
 								>
 									Download CV
@@ -155,18 +157,18 @@ export default function Home({ portfolios }) {
 						>
 							<motion.h2
 								variants={leftVariant(0.6)}
-								className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
+								className="text-center text-2xl font-semibold text-[#121212] dark:text-white"
 							>
 								My Skills
 							</motion.h2>
 							<motion.div
 								variants={rightVariant(0.6)}
-								className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mx-[auto]"
+								className="line mx-[auto] mt-4 h-[1px] w-[60px] bg-green-color-alt dark:bg-green-color"
 							></motion.div>
 						</motion.div>
 
 						<div className="skills__tab">
-							<div className="w-full py-16 sm:px-0 mx-[auto]">
+							<div className="mx-[auto] w-full py-16 sm:px-0">
 								<Tab.Group>
 									<motion.div
 										variants={staggerContainer}
@@ -183,11 +185,11 @@ export default function Home({ portfolios }) {
 															<button
 																className={
 																	selected
-																		? "dark:text-white text-[#121212] font-semibold flex gap-2 items-center justify-center outline-none"
-																		: "text-tab-color flex gap-2 items-center justify-center outline-none"
+																		? "flex items-center justify-center gap-2 font-semibold text-[#121212] outline-none dark:text-white"
+																		: "flex items-center justify-center gap-2 text-tab-color outline-none"
 																}
 															>
-																<div className="text-green-color-alt dark:text-green-color text-xl">
+																<div className="text-xl text-green-color-alt dark:text-green-color">
 																	{tab.icon}
 																</div>
 																{tab.title}
@@ -205,18 +207,18 @@ export default function Home({ portfolios }) {
 												initial="hidden"
 												whileInView="show"
 												viewport={{ once: true, amount: 0.9 }}
-												className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
+												className="mx-[auto] mt-14 grid w-4/5 grid-cols-3 gap-y-10 gap-x-8 sm:grid-cols-5 lg:grid-cols-6"
 											>
 												{frontendSkills.map((skill) => (
 													<motion.div
 														key={skill.id}
-														className="skills__data flex flex-col justify-start items-center text-center"
+														className="skills__data flex flex-col items-center justify-start text-center"
 														variants={cardVariants}
 														initial="offscreen"
 														whileInView="onscreen"
 														viewport={{ once: true, amount: 0.9 }}
 													>
-														<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F0F2F4] rounded-[3rem] place-items-center mb-4">
+														<div className="skills__blob mb-4 grid h-[105px] w-[80px] place-items-center rounded-[3rem] bg-[#F0F2F4] ease-in dark:bg-black-container">
 															<motion.div
 																className="text-[2.8rem]"
 																whileHover={{ scale: 1.1 }}
@@ -229,7 +231,7 @@ export default function Home({ portfolios }) {
 																{skill.icon}
 															</motion.div>
 														</div>
-														<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212]">
+														<h3 className="skills__name font-serif text-sm text-[#121212] dark:text-white">
 															{skill.title}
 														</h3>
 														<span className="skills__subtitle text-[.6rem] text-[#666666]">
@@ -244,19 +246,19 @@ export default function Home({ portfolios }) {
 											initial="hidden"
 											whileInView="show"
 											viewport={{ once: true, amount: 0.9 }}
-											className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
+											className="mx-[auto] mt-14 grid w-4/5 grid-cols-3 gap-y-10 gap-x-8 sm:grid-cols-5 lg:grid-cols-6"
 										>
 											{uiSkills.map((skill) => (
 												<motion.div
 													key={skill.id}
 													items-center
-													className="skills__data flex flex-col justify-start items-center text-center"
+													className="skills__data flex flex-col items-center justify-start text-center"
 													variants={cardVariants}
 													initial="offscreen"
 													whileInView="onscreen"
 													viewport={{ once: true, amount: 0.6 }}
 												>
-													<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
+													<div className="skills__blob mb-4 grid h-[105px] w-[80px] place-items-center rounded-[3rem] bg-[#F6F8FA] ease-in dark:bg-black-container">
 														<motion.div
 															className="text-[2.8rem]"
 															whileHover={{ scale: 1.1 }}
@@ -269,7 +271,7 @@ export default function Home({ portfolios }) {
 															{skill.icon}
 														</motion.div>
 													</div>
-													<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212]">
+													<h3 className="skills__name font-serif text-sm text-[#121212] dark:text-white">
 														{skill.title}
 													</h3>
 													<span className="skills__subtitle text-[.6rem] text-[#666666]">
@@ -283,18 +285,18 @@ export default function Home({ portfolios }) {
 											initial="hidden"
 											whileInView="show"
 											viewport={{ once: true, amount: 0.9 }}
-											className="w-4/5 mx-[auto] mt-14 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-y-10 gap-x-8"
+											className="mx-[auto] mt-14 grid w-4/5 grid-cols-3 gap-y-10 gap-x-8 sm:grid-cols-5 lg:grid-cols-6"
 										>
 											{otherSkills.map((skill) => (
 												<motion.div
 													key={skill.id}
-													className="skills__data flex flex-col justify-start items-center text-center"
+													className="skills__data flex flex-col items-center justify-start text-center"
 													variants={cardVariants}
 													initial="offscreen"
 													whileInView="onscreen"
 													viewport={{ once: true, amount: 0.6 }}
 												>
-													<div className="skills__blob grid w-[80px] h-[105px] ease-in dark:bg-black-container bg-[#F6F8FA] rounded-[3rem] place-items-center mb-4">
+													<div className="skills__blob mb-4 grid h-[105px] w-[80px] place-items-center rounded-[3rem] bg-[#F6F8FA] ease-in dark:bg-black-container">
 														<motion.div
 															className="text-[2.8rem]"
 															whileHover={{ scale: 1.1 }}
@@ -307,7 +309,7 @@ export default function Home({ portfolios }) {
 															{skill.icon}
 														</motion.div>
 													</div>
-													<h3 className="skills__name font-serif text-sm dark:text-white text-[#121212]">
+													<h3 className="skills__name font-serif text-sm text-[#121212] dark:text-white">
 														{skill.title}
 													</h3>
 													<span className="skills__subtitle text-[.6rem] text-[#666666]">
@@ -327,14 +329,14 @@ export default function Home({ portfolios }) {
 						initial="hidden"
 						whileInView="show"
 						viewport={{ once: true, amount: 0.9 }}
-						className="about lg:hidden lg:flex lg:gap-12 lg:items-center lg:justify-center lg:mx-[auto] lg:w-[75%]"
+						className="about lg:mx-[auto] lg:flex lg:hidden lg:w-[75%] lg:items-center lg:justify-center lg:gap-12"
 					>
 						<motion.div
 							variants={cardVariants}
 							initial="offscreen"
 							whileInView="onscreen"
 							viewport={{ once: true, amount: 0.6 }}
-							className="img h-[380px] md:h-[510px] lg:h-[600px] justify-center items-center rounded-t-[258px] rounded-b-[16px] overflow-hidden mx-[auto]"
+							className="img mx-[auto] h-[380px] items-center justify-center overflow-hidden rounded-t-[258px] rounded-b-[16px] md:h-[510px] lg:h-[600px]"
 						>
 							<Image
 								src={aboutImg}
@@ -349,11 +351,11 @@ export default function Home({ portfolios }) {
 							viewport={{ once: true, amount: 0.6 }}
 							className="about__content"
 						>
-							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-semibold">
+							<h2 className="mt-8 text-center text-2xl font-semibold text-[#121212] dark:text-white lg:text-left">
 								Who Is Gabriel, and Why Him?
 							</h2>
-							<div className="line w-[100px] h-[1px] mx-[auto] lg:mx-[unset] bg-green-color-alt dark:bg-green-color mt-4 mb-10"></div>
-							<p className="dark:text-white text-[#121212] text-center lg:text-left font-normal leading-[1.8] mb-14">
+							<div className="line mx-[auto] mt-4 mb-10 h-[1px] w-[100px] bg-green-color-alt dark:bg-green-color lg:mx-[unset]"></div>
+							<p className="mb-14 text-center font-normal leading-[1.8] text-[#121212] dark:text-white lg:text-left">
 								Hi, I'm Gabriel Samuel Aina, a creative professional from
 								Nigeria with over a decade of experience in graphic design,
 								UI/UX design, and frontend development. I have worked with top
@@ -364,7 +366,7 @@ export default function Home({ portfolios }) {
 								trends in the industry.
 							</p>
 
-							<div className="flex justify-center items-center lg:justify-start">
+							<div className="flex items-center justify-center lg:justify-start">
 								<motion.div
 									whileHover={{ scale: 1.2 }}
 									whileTap={{ scale: 0.9 }}
@@ -372,7 +374,7 @@ export default function Home({ portfolios }) {
 								>
 									<Link
 										href="/about"
-										className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
+										className="bg-green-color-alt py-4 px-8 font-semibold text-white dark:bg-green-color"
 									>
 										Read More
 									</Link>
@@ -386,11 +388,11 @@ export default function Home({ portfolios }) {
 						initial="hidden"
 						whileInView="show"
 						viewport={{ once: true, amount: 0.25 }}
-						className="about hidden lg:block lg:flex lg:gap-12 lg:items-center lg:justify-center lg:mx-[auto] lg:w-[75%] lg:mt-10"
+						className="about hidden lg:mx-[auto] lg:mt-10 lg:block lg:flex lg:w-[75%] lg:items-center lg:justify-center lg:gap-12"
 					>
 						<motion.div
 							variants={leftVariant(0.3)}
-							className="img h-[380px] md:h-[510px] lg:h-[600px] justify-center items-center rounded-t-[258px] rounded-b-[16px] overflow-hidden mx-[auto]"
+							className="img mx-[auto] h-[380px] items-center justify-center overflow-hidden rounded-t-[258px] rounded-b-[16px] md:h-[510px] lg:h-[600px]"
 						>
 							<Image
 								src={aboutImg}
@@ -399,11 +401,11 @@ export default function Home({ portfolios }) {
 							/>
 						</motion.div>
 						<motion.div variants={rightVariant(0.3)} className="about__content">
-							<h2 className="text-center lg:text-left text-2xl mt-8 dark:text-white text-[#121212] font-semibold">
+							<h2 className="mt-8 text-center text-2xl font-semibold text-[#121212] dark:text-white lg:text-left">
 								Who Is Gabriel, and Why Him?
 							</h2>
-							<div className="line w-[100px] h-[1px] mx-[auto] lg:mx-[unset] bg-green-color-alt dark:bg-green-color mt-4 mb-10"></div>
-							<p className="dark:text-white text-[#121212] text-center lg:text-left font-normal leading-[1.8] mb-14">
+							<div className="line mx-[auto] mt-4 mb-10 h-[1px] w-[100px] bg-green-color-alt dark:bg-green-color lg:mx-[unset]"></div>
+							<p className="mb-14 text-center font-normal leading-[1.8] text-[#121212] dark:text-white lg:text-left">
 								Hi, I'm Gabriel Samuel Aina, a creative professional from
 								Nigeria with over a decade of experience in graphic design,
 								UI/UX design, and frontend development. I have worked with top
@@ -414,7 +416,7 @@ export default function Home({ portfolios }) {
 								trends in the industry.
 							</p>
 
-							<div className="flex justify-center items-center lg:justify-start">
+							<div className="flex items-center justify-center lg:justify-start">
 								<motion.div
 									whileHover={{ scale: 1.2 }}
 									whileTap={{ scale: 0.9 }}
@@ -422,7 +424,7 @@ export default function Home({ portfolios }) {
 								>
 									<Link
 										href="/about"
-										className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
+										className="bg-green-color-alt py-4 px-8 font-semibold text-white dark:bg-green-color"
 									>
 										Read More
 									</Link>
@@ -440,13 +442,13 @@ export default function Home({ portfolios }) {
 						>
 							<motion.h2
 								variants={leftVariant(0.4)}
-								className="text-center text-2xl dark:text-white text-[#121212] font-semibold"
+								className="text-center text-2xl font-semibold text-[#121212] dark:text-white"
 							>
 								My Work
 							</motion.h2>
 							<motion.div
 								variants={rightVariant(0.4)}
-								className="line w-[60px] h-[1px] bg-green-color-alt dark:bg-green-color mt-4 mb-20 mx-[auto]"
+								className="line mx-[auto] mt-4 mb-20 h-[1px] w-[60px] bg-green-color-alt dark:bg-green-color"
 							></motion.div>
 						</motion.div>
 
@@ -461,13 +463,13 @@ export default function Home({ portfolios }) {
 								>
 									<motion.div
 										whileHover={{ borderRadius: 300 }}
-										className="img h-[200px] md:h-[310px] lg:h-[450px] xl:h-[590px] bg-contain overflow-hidden cursor-pointer"
+										className="img h-[200px] cursor-pointer overflow-hidden bg-contain md:h-[310px] lg:h-[450px] xl:h-[590px]"
 										onClick={() => router.push(`/case-study/${p.slug.current}`)}
 									>
 										<motion.img
 											src={p.image}
 											alt={p.name}
-											className="h-[100%] w-[100%] object-cover bg-contain aspect-auto"
+											className="aspect-auto h-[100%] w-[100%] bg-contain object-cover"
 											whileHover={{ scale: 1.1 }}
 											transition={{
 												type: "spring",
@@ -476,23 +478,23 @@ export default function Home({ portfolios }) {
 											}}
 										/>
 									</motion.div>
-									<div className="work__content flex flex-wrap lg:flex-no-wrap gap-4 items-start justify-start mt-8 lg:mt-14">
-										<div className="work__detail flex justify-start items-center gap-4 min-w-[270px] lg:min-w-[200px]">
-											<span className="dark:text-white text-[#121212] text-sm font-medium">
+									<div className="work__content lg:flex-no-wrap mt-8 flex flex-wrap items-start justify-start gap-4 lg:mt-14">
+										<div className="work__detail flex min-w-[270px] items-center justify-start gap-4 lg:min-w-[200px]">
+											<span className="text-sm font-medium text-[#121212] dark:text-white">
 												{p.type}
 											</span>
-											<div className="line w-[40px] h-[1px] bg-[#4F4F54]"></div>
+											<div className="line h-[1px] w-[40px] bg-[#4F4F54]"></div>
 										</div>
 										<div className="work__name">
-											<h3 className="dark:text-white text-[#121212] text-3xl md:text-4xl lg:text-6xl lg:mt-[-6px] font-semibold">
+											<h3 className="text-3xl font-semibold text-[#121212] dark:text-white md:text-4xl lg:mt-[-6px] lg:text-6xl">
 												{p.name}
 											</h3>
-											<p className="desc mt-1 text-[#7E7E86] text-sm leading-[1.6] lg:max-w-[500px] lg:ml-[5px] lg:mt-6">
+											<p className="desc mt-1 text-sm leading-[1.6] text-[#7E7E86] lg:ml-[5px] lg:mt-6 lg:max-w-[500px]">
 												{p.description}
 											</p>
 										</div>
 									</div>
-									<div className="line w-[100%] h-[1px] bg-[#4F4F54] mt-24 mb-10 mx-[auto]"></div>
+									<div className="line mx-[auto] mt-24 mb-10 h-[1px] w-[100%] bg-[#4F4F54]"></div>
 								</motion.article>
 							))
 						) : (
@@ -503,7 +505,7 @@ export default function Home({ portfolios }) {
 							whileHover={{ scale: 1.2 }}
 							whileTap={{ scale: 0.9 }}
 							transition={{ type: "spring", stiffness: 400, damping: 17 }}
-							className="flex justify-center items-center mt-20"
+							className="mt-20 flex items-center justify-center"
 						>
 							<motion.div
 								whileHover={{ scale: 1.2 }}
@@ -512,7 +514,7 @@ export default function Home({ portfolios }) {
 							>
 								<Link
 									href="/case-study"
-									className="py-4 px-8 bg-green-color-alt dark:bg-green-color text-white font-semibold"
+									className="bg-green-color-alt py-4 px-8 font-semibold text-white dark:bg-green-color"
 								>
 									See All Work
 								</Link>

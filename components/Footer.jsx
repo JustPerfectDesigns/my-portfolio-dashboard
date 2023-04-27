@@ -26,7 +26,7 @@ const Footer = () => {
 		>
 			<motion.h2
 				variants={textVariant(0.3)}
-				className="text-5xl md:text-7xl font-medium text-center dark:text-white text-[#121212] mb-12"
+				className="mb-12 text-center text-5xl font-medium text-[#121212] dark:text-white md:text-7xl"
 			>
 				Let's talk.
 			</motion.h2>
@@ -34,26 +34,49 @@ const Footer = () => {
 				variants={textVariant(0.4)}
 				className="social__contact flex flex-wrap items-center justify-center gap-6"
 			>
-				<a href="" className="dark:text-white text-[#121212]">
-					LinkedIn
+				<a
+					href="https://www.linkedin.com/in/gabriel-aina/"
+					target="_blank"
+					className="text-[#121212] dark:text-white"
+				>
+					{"<LinkedIn />"}
 				</a>
-				<a href="" className="dark:text-white text-[#121212]">
-					Dribbble
+				<a
+					href="https://dribbble.com/justperfectdesigns"
+					target="_blank"
+					className="text-[#121212] dark:text-white"
+				>
+					{"<Dribbble />"}
 				</a>
-				<a href="" className="dark:text-white text-[#121212]">
-					Behance
+				<a
+					href="https://www.behance.net/justperfectdesigns"
+					target="_blank"
+					className="text-[#121212] dark:text-white"
+				>
+					{"<Behance />"}
 				</a>
-				<a href="" className="dark:text-white text-[#121212]">
-					Instagram
+				<a
+					href="https://www.instagram.com/justperfect_designs/"
+					target="_blank"
+					className="text-[#121212] dark:text-white"
+				>
+					{"<Instagram />"}
 				</a>
-				<a href="" className="dark:text-white text-[#121212]">
-					Twitter
+				<a href="" target="_blank" className="text-[#121212] dark:text-white">
+					{"<Twitter />"}
 				</a>
-				<a href="" className="dark:text-white text-[#121212]">
-					Email
+				<a
+					href="mailto:gabriel.jpdesigns@gmail.com"
+					className="text-[#121212] dark:text-white"
+				>
+					{"<Email />"}
 				</a>
-				<a href="" className="dark:text-white text-[#121212]">
-					Resume
+				<a
+					href="../resume/GABRIEL-SAMUEL-AINA-CV-RESUME.zip"
+					download={"GABRIEL SAMUEL AINA CV/Resume - Dark and Light Version"}
+					className="text-[#121212] dark:text-white"
+				>
+					{"<Resume />"}
 				</a>
 			</motion.div>
 		</motion.div>
