@@ -125,7 +125,7 @@ export const Post = ({ title, body, image }) => {
 							<span className="md:text-normal mb-[5px] block text-sm">
 								If you need me to help with your website, web app or branding,{" "}
 								<a
-									href="https://neilpatel.com/consulting/"
+									href="mailto:gabriel.jpdesigns@gmail.com"
 									className="font-medium text-[#45C87F]"
 								>
 									click here
