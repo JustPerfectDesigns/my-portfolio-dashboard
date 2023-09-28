@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import Image from "next/image";
-import aboutImg from "../public/images/about.jpg";
+import aboutImg from "../public/images/gabriel-img.png";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { client, urlFor } from "../lib/client";

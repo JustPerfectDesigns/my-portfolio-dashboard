@@ -2,26 +2,26 @@
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
-import BlockContent from "@sanity/block-content-to-react";
+// import BlockContent from "@sanity/block-content-to-react";
 import dynamic from "next/dynamic";
 // import "../../public/post.module.css"
 import { motion } from "framer-motion";
 import Footer from "../../components/Footer";
-import {
-	fadeInUp,
-	stagger,
-	cardVariants,
-	fadeDownVariant,
-	fadeUp,
-	slideIn,
-	staggerContainer,
-	textVariant,
-	leftVariant,
-	rightVariant,
-	fadeIn,
-	opacityVariant,
-} from "../../utils/motion";
-import Gab from "../../public/images/gab.png";
+// import {
+// 	fadeInUp,
+// 	stagger,
+// 	cardVariants,
+// 	fadeDownVariant,
+// 	fadeUp,
+// 	slideIn,
+// 	staggerContainer,
+// 	textVariant,
+// 	leftVariant,
+// 	rightVariant,
+// 	fadeIn,
+// 	opacityVariant,
+// } from "../../utils/motion";
+import Gabriel from "../../public/images/gabriel-image-small.png";
 import Image from "next/image";
 
 export const Post = ({ title, body, image }) => {
@@ -116,7 +116,11 @@ export const Post = ({ title, body, image }) => {
 					<div className="hero flex items-center gap-7">
 						{/* <span>Put the header with advertising yourself here</span> */}
 						<div className="min-h-[80px] min-w-[80px] overflow-hidden rounded-full bg-red-400 md:min-h-[75px] md:w-[75px]">
-							<Image src={Gab} alt="Gabriel Samuel Aina" className="w-[100%]" />
+							<Image
+								src={Gabriel}
+								alt="Gabriel Samuel Aina"
+								className="w-[100%]"
+							/>
 						</div>
 						<div className='relative w-[100%] border-2 border-[#f2f2f2] bg-[#f4f6f8] py-[15px] px-[15px] text-[#44464c] before:absolute before:top-[50%] before:left-0 before:mt-[-11px] before:ml-[-11px] before:block before:h-[22px] before:w-[22px] before:rotate-45 before:border-b-2 before:border-l-2 before:border-[#f2f2f2] before:bg-inherit before:content-[""] dark:border-[#252528] dark:bg-black-container dark:text-white dark:before:border-[#252528] md:py-[15px] md:px-[25px] lg:py-[20px] lg:px-[43px]'>
 							<span className="mb-[5px] block text-[16px] font-semibold md:text-[18px] md:leading-[1.6]">
@@ -167,18 +171,18 @@ export const Post = ({ title, body, image }) => {
 								<style>{`
 										.blockc h1 {
 										font-size: 32px;
-										font-weight: 600;
+										// font-weight: 600;
 										line-height: 1.2;
 										margin: 1.5rem 0
 										}
 										.blockc h2 {
 										font-size: 24px;
-										font-weight: 600;
+										// font-weight: 600;
 										margin: 1.5rem 0
 										}
 										.blockc h3 {
 										font-size: 18px;
-										font-weight: 600;
+										// font-weight: 600;
 										margin: 1.5rem 0
 										}
 										.blockc h4 {
@@ -261,14 +265,14 @@ export const Post = ({ title, body, image }) => {
 						</div>
 					</div>
 				</section>
-				<aside className="h-[33rem] w-full lg:sticky lg:top-[2rem]">
-					<div className="flex w-full flex-col items-center justify-center border-2 border-[#f2f2f2] bg-[#f4f6f8] p-12 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
+				<aside className="w-full lg:top-[2rem]">
+					<div className="mb-14 flex w-full flex-col items-center justify-center border-2 border-[#f2f2f2] bg-[#f4f6f8] p-12 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
 						<div className="mb-4 h-[3px]  w-[70px] bg-[#45C87F]"></div>
 						<h2 className="mb-2 text-center text-3xl font-light">
-							Do you need
+							Do you need a
 						</h2>
 						<h2 className="text-center text-3xl font-semibold">
-							a website development or Ui/Ux service?
+							website dev or Ui/Ux design service?
 						</h2>
 						<p className="mt-6 text-center font-light">
 							Hey, I'm Gabriel. I'm determined to make a business grow. My only
@@ -291,17 +295,63 @@ export const Post = ({ title, body, image }) => {
 							</Link>
 						</div>
 					</div>
-					<div className="new-aside w-full border-2 border-[#f2f2f2] bg-[#f4f6f8] p-6 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
-						iusto repudiandae error neque quisquam beatae odio quis perspiciatis
-						maxime quaerat assumenda, laudantium ex libero, tenetur dolorem
-						velit. Facilis cumque cupiditate aperiam, delectus incidunt
-						architecto temporibus repellat expedita assumenda dolore commodi,
-						alias obcaecati perferendis sapiente aliquam repudiandae deleniti in
-						harum! Tenetur iusto nesciunt temporibus deserunt, eligendi debitis
-						id cumque odit beatae iure a! Quidem eaque, corporis repellat
-						molestiae rerum debitis quod itaque aliquam cum dolores distinctio
-						repellendus dolorem repudiandae quisquam atque delectus.
+
+					<div className="mb-14 w-full border-2 border-[#f2f2f2] bg-[#f4f6f8] text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
+						<div className="border-b-2 border-[#f2f2f2] dark:border-[#252528]">
+							<Image
+								src={Gabriel}
+								alt="Picture of the author"
+								width={500}
+								height={500}
+								quality={100}
+							/>
+						</div>
+						<div className="p-12 text-[#44464c] dark:text-white">
+							I'm Gabriel Samuel Aina, a talented and experienced frontend &
+							MERN Stack Developer, UI/UX designer, and graphic designer from
+							Nigeria. I create beautiful, user friendly responsive websites and
+							web app, including the user interface. I am also a tutor and a
+							content creator on YouTube with almost 2k subscribers and
+							students.
+							<Link
+								href="/about"
+								className="mt-6 flex items-center justify-center bg-green-color-alt py-4 px-6 font-semibold text-white dark:bg-green-color"
+							>
+								Learn More
+							</Link>
+						</div>
+					</div>
+
+					<div className="h-[33rem] w-full lg:sticky lg:top-[8rem]">
+						<div className="flex w-full flex-col items-center justify-center border-2 border-[#f2f2f2] bg-[#f4f6f8] p-12 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
+							<div className="mb-4 h-[3px]  w-[70px] bg-[#45C87F]"></div>
+							<h2 className="mb-2 text-center text-3xl font-light">
+								Do you need a
+							</h2>
+							<h2 className="text-center text-3xl font-semibold">
+								website dev or Ui/Ux design service?
+							</h2>
+							<p className="mt-6 text-center font-light">
+								Hey, I'm Gabriel. I'm determined to make a business grow. My
+								only question is, will it be yours?
+							</p>
+
+							<div className="mt-6 flex items-center justify-center gap-4">
+								<Link
+									href="mailto:gabriel.jpdesigns@gmail.com"
+									className="font-semibold text-[#45C87F]"
+								>
+									Write to me
+								</Link>
+								<div className="h-[20px] w-[2px] bg-slate-300 dark:bg-[#3a3a3e]"></div>
+								<Link
+									href="tel:+2348086563244"
+									className="font-semibold text-[#45C87F]"
+								>
+									Call me
+								</Link>
+							</div>
+						</div>
 					</div>
 				</aside>
 			</motion.div>
