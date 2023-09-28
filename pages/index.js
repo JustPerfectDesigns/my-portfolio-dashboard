@@ -9,6 +9,7 @@ import { client, urlFor } from "../lib/client";
 import { Tab } from "@headlessui/react";
 import tabNav from "../data/tabNav";
 import frontendSkills from "./../data/frontendSkills";
+import backendSkills from "./../data/backendSkills";
 import uiSkills from "./../data/uiSkills";
 import otherSkills from "./../data/otherSkills";
 import { useState, useEffect } from "react";
@@ -89,7 +90,7 @@ export default function Home({ portfolios }) {
 							variants={textVariant(0.3)}
 							className="mb-8 text-center text-lg font-semibold uppercase text-green-color-alt dark:text-green-color lg:text-2xl"
 						>
-							Gabriel Samuel A.
+							Hello, I'm Gabriel Samuel A.
 						</motion.h3>
 						<motion.div
 							variants={textVariant(0.4)}
@@ -99,17 +100,22 @@ export default function Home({ portfolios }) {
 							variants={textVariant(0.5)}
 							className="mt-8 text-center text-[2.2rem] font-semibold leading-10 text-[#121212] dark:text-white md:text-3xl lg:text-6xl lg:leading-[1.3]"
 						>
-							I’m a Front-End Developer with <br />
-							experience in UI & Graphics
+							An Exceptional UI Designer, <br /> Front-End, and MERN Stack
+							Developer.
 						</motion.h2>
 
 						<motion.p
 							variants={textVariant(0.6)}
 							className="mt-8 text-center text-[1.1rem] font-light leading-[1.6] text-[#121212] dark:text-white lg:text-[1.5rem]"
 						>
-							Hello, I'm Gabriel Samuel Aina, My passion is to help businesses
-							succeed worldwide through my skills, knowledge, and dedication to
-							growth.
+							Simply put, my passion is to help businesses succeed worldwide
+							through my skills, knowledge, and dedication to growth.{" "}
+							<b>
+								<strong>
+									I'm also currently learning Mobile App Development using React
+									Native, Dart and Flutter.
+								</strong>
+							</b>
 						</motion.p>
 						<motion.div
 							variants={textVariant(0.7)}
@@ -210,6 +216,46 @@ export default function Home({ portfolios }) {
 												className="mx-[auto] mt-14 grid w-4/5 grid-cols-3 gap-y-10 gap-x-8 sm:grid-cols-5 lg:grid-cols-6"
 											>
 												{frontendSkills.map((skill) => (
+													<motion.div
+														key={skill.id}
+														className="skills__data flex flex-col items-center justify-start text-center"
+														variants={cardVariants}
+														initial="offscreen"
+														whileInView="onscreen"
+														viewport={{ once: true, amount: 0.9 }}
+													>
+														<div className="skills__blob mb-4 grid h-[105px] w-[80px] place-items-center rounded-[3rem] bg-[#F0F2F4] ease-in dark:bg-black-container">
+															<motion.div
+																className="text-[2.8rem]"
+																whileHover={{ scale: 1.1 }}
+																transition={{
+																	type: "spring",
+																	stiffness: 400,
+																	damping: 10,
+																}}
+															>
+																{skill.icon}
+															</motion.div>
+														</div>
+														<h3 className="skills__name font-serif text-sm text-[#121212] dark:text-white">
+															{skill.title}
+														</h3>
+														<span className="skills__subtitle text-[.6rem] text-[#666666]">
+															{skill.desc}
+														</span>
+													</motion.div>
+												))}
+											</Tab.Panel>
+										</div>
+										<div>
+											<Tab.Panel
+												variants={staggerContainer}
+												initial="hidden"
+												whileInView="show"
+												viewport={{ once: true, amount: 0.9 }}
+												className="mx-[auto] mt-14 grid w-4/5 grid-cols-3 gap-y-10 gap-x-8 sm:grid-cols-5 lg:grid-cols-6"
+											>
+												{backendSkills.map((skill) => (
 													<motion.div
 														key={skill.id}
 														className="skills__data flex flex-col items-center justify-start text-center"

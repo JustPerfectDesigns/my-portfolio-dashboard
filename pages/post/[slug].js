@@ -165,105 +165,143 @@ export const Post = ({ title, body, image }) => {
 									// className="leading-7"
 								/>
 								<style>{`
-                  .blockc h1 {
-                    font-size: 32px;
-                    font-weight: 600;
-                    line-height: 1.2;
-                    margin: 1.5rem 0
-                  }
-                  .blockc h2 {
-                    font-size: 24px;
-                    font-weight: 600;
-                    margin: 1.5rem 0
-                  }
-                  .blockc h3 {
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin: 1.5rem 0
-                  }
-                  .blockc h4 {
-                    font-size: 16px;
-                    font-weight: 600;
-                    margin: 1.5rem 0
-                  }
-                  .blockc p {
-                    font-weight: 400;
-                  }
-                  .blockc a {
-                    color: #45C87F;
-                    font-weight: 500;
-                  }
-                  .blockc img {
-                    margin: 1.5rem 0;
-                  }
+										.blockc h1 {
+										font-size: 32px;
+										font-weight: 600;
+										line-height: 1.2;
+										margin: 1.5rem 0
+										}
+										.blockc h2 {
+										font-size: 24px;
+										font-weight: 600;
+										margin: 1.5rem 0
+										}
+										.blockc h3 {
+										font-size: 18px;
+										font-weight: 600;
+										margin: 1.5rem 0
+										}
+										.blockc h4 {
+										font-size: 16px;
+										font-weight: 600;
+										margin: 1.5rem 0
+										}
+										.blockc p {
+										font-weight: 400;
+										}
+										.blockc a {
+										color: #45C87F;
+										font-weight: 500;
+										}
+										.blockc img {
+										margin: 1.5rem 0;
+										}
 
-                  .blockc ul {
-                    margin: 2rem 0 2rem 1.4rem;
-                  }
+										.blockc ul {
+										margin: 2rem 0 2rem 1.4rem;
+										}
 
-                  .blockc ul li {
-                    list-style: none;
-                    position: relative;
-                    padding: 0 0 0 1.5rem;
-                    margin: 1rem 0;
-                  }
+										.blockc ul li {
+										list-style: none;
+										position: relative;
+										padding: 0 0 0 1.5rem;
+										margin: 1rem 0;
+										}
 
-                  .blockc ul li::before {
-                    content: "";
-                    display: block;
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: #45C87F;
-                    position: absolute;
-                    top: .9rem;
-                    left: 0;
-                    margin-top: -4px;
-                  }
+										.blockc ul li::before {
+										content: "";
+										display: block;
+										width: 8px;
+										height: 8px;
+										border-radius: 50%;
+										background: #45C87F;
+										position: absolute;
+										top: .9rem;
+										left: 0;
+										margin-top: -4px;
+										}
 
-                  .blockc ol {
-                    margin: 2rem 0 2rem 1.4rem;
-                  }
+										.blockc ol {
+										margin: 2rem 0 2rem 1.4rem;
+										}
 
-                  .blockc ol li {
-                    list-style: number;
-                    position: relative;
-                    padding: 0 0 0 1.5rem;
-                    margin: 1rem 0;
-                  }
+										.blockc ol li {
+										list-style: number;
+										position: relative;
+										padding: 0 0 0 1.5rem;
+										margin: 1rem 0;
+										}
 
-                  // .blockc ol li::before {
-                  //   content: "";
-                  //   display: block;
-                  //   width: 8px;
-                  //   height: 8px;
-                  //   border-radius: 50%;
-                  //   background: #45C87F;
-                  //   position: absolute;
-                  //   top: .9rem;
-                  //   left: 0;
-                  //   margin-top: -4px;
-                  // }
+										// .blockc ol li::before {
+										//   content: "";
+										//   display: block;
+										//   width: 8px;
+										//   height: 8px;
+										//   border-radius: 50%;
+										//   background: #45C87F;
+										//   position: absolute;
+										//   top: .9rem;
+										//   left: 0;
+										//   margin-top: -4px;
+										// }
 
-                  @media screen and (min-width: 1024px) {
-                    .blockc img {
-                      margin: 2.5rem 0;
-                    }
+										@media screen and (min-width: 1024px) {
+										.blockc img {
+											margin: 2.5rem 0;
+										}
 
-                    .blockc p {
-                      font-size: 18px;
-                      font-weight: 400;
-                      line-height: 2;
-                    }
-                  }
-              `}</style>
+										.blockc p {
+											font-size: 18px;
+											font-weight: 400;
+											line-height: 2;
+										}
+										}
+								`}</style>
 							</noSSR>
 						</div>
 					</div>
 				</section>
-				<aside className="h-[10rem] w-full lg:sticky lg:top-[2rem]">
-					<div className="h-[200px] w-full border-2 border-[#f2f2f2] bg-[#f4f6f8] p-6 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
-						This section is still not done. Remember!
+				<aside className="h-[33rem] w-full lg:sticky lg:top-[2rem]">
+					<div className="flex w-full flex-col items-center justify-center border-2 border-[#f2f2f2] bg-[#f4f6f8] p-12 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
+						<div className="mb-4 h-[3px]  w-[70px] bg-[#45C87F]"></div>
+						<h2 className="mb-2 text-center text-3xl font-light">
+							Do you need
+						</h2>
+						<h2 className="text-center text-3xl font-semibold">
+							a website development or Ui/Ux service?
+						</h2>
+						<p className="mt-6 text-center font-light">
+							Hey, I'm Gabriel. I'm determined to make a business grow. My only
+							question is, will it be yours?
+						</p>
+
+						<div className="mt-6 flex items-center justify-center gap-4">
+							<Link
+								href="mailto:gabriel.jpdesigns@gmail.com"
+								className="font-semibold text-[#45C87F]"
+							>
+								Write to me
+							</Link>
+							<div className="h-[20px] w-[2px] bg-slate-300 dark:bg-[#3a3a3e]"></div>
+							<Link
+								href="tel:+2348086563244"
+								className="font-semibold text-[#45C87F]"
+							>
+								Call me
+							</Link>
+						</div>
+					</div>
+					<div className="new-aside w-full border-2 border-[#f2f2f2] bg-[#f4f6f8] p-6 text-[#44464c] dark:border-[#252528] dark:bg-black-container dark:text-white">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+						iusto repudiandae error neque quisquam beatae odio quis perspiciatis
+						maxime quaerat assumenda, laudantium ex libero, tenetur dolorem
+						velit. Facilis cumque cupiditate aperiam, delectus incidunt
+						architecto temporibus repellat expedita assumenda dolore commodi,
+						alias obcaecati perferendis sapiente aliquam repudiandae deleniti in
+						harum! Tenetur iusto nesciunt temporibus deserunt, eligendi debitis
+						id cumque odit beatae iure a! Quidem eaque, corporis repellat
+						molestiae rerum debitis quod itaque aliquam cum dolores distinctio
+						repellendus dolorem repudiandae quisquam atque delectus.
 					</div>
 				</aside>
 			</motion.div>
