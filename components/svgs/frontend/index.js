@@ -14,3 +14,4 @@ export { default as Sanity } from "./sanity.svg";
 export { default as Sass } from "./sass-1.svg";
 export { default as Solid } from "./solidjs-icon.svg";
 export { default as TailwindCss } from "./tailwind-css-2.svg";
+export { default as TypeScript } from "./typescript.svg";
