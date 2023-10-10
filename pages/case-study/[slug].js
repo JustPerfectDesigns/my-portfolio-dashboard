@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 import {
 	fadeDownVariant,
+	leftVariant,
+	rightVariant,
 	staggerContainer,
 	textVariant,
 } from "../../utils/motion";
@@ -12,6 +14,7 @@ import {
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { NumberCircleThree } from "phosphor-react";
+import { useRouter } from "next/router";
 
 export default function CaseStudy({
 	image,
@@ -411,5 +414,27 @@ export const getServerSideProps = async (pageContext) => {
 		};
 	}
 };
+
+// export const getServerSideProps = async (pageContext) => {
+// 	const query = encodeURIComponent(
+// 		'*[ _type == "portfolio" ] | order(_createdAt desc) [0...3]'
+// 	);
+// 	const url = `https://r5dols4o.api.sanity.io/v1/data/query/production?query=${query}`;
+// 	const result = await fetch(url).then((res) => res.json());
+
+// 	if (!result.result || !result.result.length) {
+// 		return {
+// 			props: {
+// 				portfolios: [],
+// 			},
+// 		};
+// 	} else {
+// 		return {
+// 			props: {
+// 				portfolios: result.result,
+// 			},
+// 		};
+// 	}
+// };
 
 // End of The New ServerSide

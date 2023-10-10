@@ -41,13 +41,13 @@ const Footer = () => {
 				>
 					{"<LinkedIn />"}
 				</a>
-				<a
+				{/* <a
 					href="https://dribbble.com/justperfectdesigns"
 					target="_blank"
 					className="text-[#121212] dark:text-white"
 				>
 					{"<Dribbble />"}
-				</a>
+				</a> */}
 				<a
 					href="https://www.behance.net/justperfectdesigns"
 					target="_blank"
@@ -55,16 +55,16 @@ const Footer = () => {
 				>
 					{"<Behance />"}
 				</a>
-				<a
+				{/* <a
 					href="https://www.instagram.com/justperfect_designs/"
 					target="_blank"
 					className="text-[#121212] dark:text-white"
 				>
 					{"<Instagram />"}
-				</a>
-				<a href="" target="_blank" className="text-[#121212] dark:text-white">
+				</a> */}
+				{/* <a href="" target="_blank" className="text-[#121212] dark:text-white">
 					{"<Twitter />"}
-				</a>
+				</a> */}
 				<a
 					href="mailto:gabriel.jpdesigns@gmail.com"
 					className="text-[#121212] dark:text-white"
@@ -72,8 +72,8 @@ const Footer = () => {
 					{"<Email />"}
 				</a>
 				<a
-					href="../resume/GABRIEL-SAMUEL-AINA-CV-RESUME.zip"
-					download={"GABRIEL SAMUEL AINA CV/Resume - Dark and Light Version"}
+					href="../resume/GABRIEL-AINA-FRONTEND-BACKEND-UI-RESUME.pdf"
+					download={"GABRIEL SAMUEL AINA FRONTEND BACKEND AND UI DESIGN RESUME"}
 					className="text-[#121212] dark:text-white"
 				>
 					{"<Resume />"}

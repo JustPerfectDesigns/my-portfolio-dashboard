@@ -112,8 +112,8 @@ export default function Home({ portfolios }) {
 							through my skills, knowledge, and dedication to growth.{" "}
 							<b>
 								<strong>
-									I'm also currently learning Mobile App Development using React
-									Native, Dart and Flutter.
+									Currently advancing skills in mobile app development using
+									Dart and Flutter.
 								</strong>
 							</b>
 						</motion.p>
@@ -140,10 +140,10 @@ export default function Home({ portfolios }) {
 								transition={{ type: "spring", stiffness: 400, damping: 17 }}
 							>
 								<Link
-									href="../resume/GABRIEL-SAMUEL-AINA-CV-RESUME.zip"
+									href="../resume/GABRIEL-AINA-FRONTEND-BACKEND-UI-RESUME.pdf"
 									className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
 									download={
-										"GABRIEL SAMUEL AINA CV/Resume - Dark and Light Version"
+										"GABRIEL SAMUEL AINA FRONTEND BACKEND AND UI DESIGN RESUME"
 									}
 									target="_blank"
 								>
