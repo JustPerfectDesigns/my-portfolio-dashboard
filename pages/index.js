@@ -25,6 +25,7 @@ import {
 	rightVariant,
 	opacityVariant,
 } from "../utils/motion";
+import Modal from "../components/Modal";
 
 // function classNames(...classes) {
 // 	return classes.filter(Boolean).join(" ");
@@ -33,6 +34,15 @@ import {
 export default function Home({ portfolios }) {
 	const router = useRouter();
 	const [mappedPortfolio, setMappedPortfolio] = useState([]);
+	const [modalOpen, setModalOpen] = useState(false);
+
+	const openModal = () => {
+		setModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setModalOpen(false);
+	};
 
 	useEffect(() => {
 		if (portfolios.length) {
@@ -139,18 +149,32 @@ export default function Home({ portfolios }) {
 								whileTap={{ scale: 0.9 }}
 								transition={{ type: "spring", stiffness: 400, damping: 17 }}
 							>
-								<Link
-									href="../resume/GABRIEL-AINA-FRONTEND-BACKEND-UI-RESUME.pdf"
-									className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
-									download={
-										"GABRIEL SAMUEL AINA FRONTEND BACKEND AND UI DESIGN RESUME"
-									}
-									target="_blank"
-								>
+								<button c onClick={openModal}>
 									Download CV
-								</Link>
+								</button>
+
 								{/* <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" ><button>Download CV</button></a> */}
 							</motion.div>
+							<Modal isOpen={modalOpen} onClose={closeModal}>
+								<div className="grid items-center justify-center gap-3 md:ml-60 md:grid-cols-2">
+									<Link
+										href="../resume/GABRIEL-SAMUEL-AINA-UI-RESUME.pdf"
+										className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
+										download={"GABRIEL SAMUEL AINA UI DESIGN RESUME"}
+										target="_blank"
+									>
+										Download UI CV
+									</Link>
+									<Link
+										href="../resume/GABRIEL-SAMUEL-AINA-MERN-STACK-RESUME.pdf"
+										className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
+										download={"GABRIEL SAMUEL AINA FRONTEND AND BACKEND RESUME"}
+										target="_blank"
+									>
+										Download MERN CV
+									</Link>
+								</div>
+							</Modal>
 						</motion.div>
 					</motion.div>
 
