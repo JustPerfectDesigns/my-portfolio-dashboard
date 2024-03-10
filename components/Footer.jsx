@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
 	fadeInUp,
@@ -14,8 +16,20 @@ import {
 	fadeIn,
 	opacityVariant,
 } from "../utils/motion";
+import Modal from "./Modal";
+import Link from "next/link";
 
 const Footer = () => {
+	const [modalOpen, setModalOpen] = useState(false);
+
+	const openModal = () => {
+		setModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setModalOpen(false);
+	};
+
 	return (
 		<motion.div
 			variants={staggerContainer}
@@ -71,13 +85,32 @@ const Footer = () => {
 				>
 					{"<Email />"}
 				</a>
-				<a
-					href="../resume/GABRIEL-AINA-FRONTEND-BACKEND-UI-RESUME.pdf"
-					download={"GABRIEL SAMUEL AINA FRONTEND BACKEND AND UI DESIGN RESUME"}
-					className="text-[#121212] dark:text-white"
+				<button
+					onClick={openModal}
+					className="border-none p-0 text-[#121212] outline-none dark:text-white"
 				>
 					{"<Resume />"}
-				</a>
+				</button>
+				<Modal isOpen={modalOpen} onClose={closeModal}>
+					<div className="grid items-center justify-center gap-3 md:ml-60 md:grid-cols-2">
+						<Link
+							href="../resume/GABRIEL-SAMUEL-AINA-UI-RESUME.pdf"
+							className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
+							download={"GABRIEL SAMUEL AINA UI DESIGN RESUME"}
+							target="_blank"
+						>
+							Download UI CV
+						</Link>
+						<Link
+							href="../resume/GABRIEL-SAMUEL-AINA-MERN-STACK-RESUME.pdf"
+							className="bg-green-color-alt py-5 px-8 font-semibold text-white dark:bg-green-color"
+							download={"GABRIEL SAMUEL AINA FRONTEND AND BACKEND RESUME"}
+							target="_blank"
+						>
+							Download MERN CV
+						</Link>
+					</div>
+				</Modal>
 			</motion.div>
 		</motion.div>
 	);

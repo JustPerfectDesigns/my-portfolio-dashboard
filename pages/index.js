@@ -149,9 +149,7 @@ export default function Home({ portfolios }) {
 								whileTap={{ scale: 0.9 }}
 								transition={{ type: "spring", stiffness: 400, damping: 17 }}
 							>
-								<button c onClick={openModal}>
-									Download CV
-								</button>
+								<button onClick={openModal}>Download CV</button>
 
 								{/* <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" ><button>Download CV</button></a> */}
 							</motion.div>
